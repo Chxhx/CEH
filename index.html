@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEH 資訊安全認證考試系統 (740題)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .progress-bar-container {
+            background: #f0f0f0;
+            padding: 20px 30px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .progress-info span {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .controls {
+            padding: 20px 30px;
+            background: #f9f9f9;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #218838;
+        }
+
+        .btn-warning {
+            background: #ffc107;
+            color: #333;
+        }
+
+        .btn-warning:hover {
+            background: #e0a800;
+        }
+
+        .btn-info {
+            background: #17a2b8;
+            color: white;
+        }
+
+        .btn-info:hover {
+            background: #138496;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .question-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .question-number {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .bookmark-btn {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .bookmark-btn:hover {
+            transform: scale(1.2);
+        }
+
+        .bookmark-btn.active {
+            color: #ffc107;
+        }
+
+        .question-text {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 25px;
+            white-space: pre-wrap;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .option {
+            padding: 15px 20px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .option:hover {
+            border-color: #667eea;
+            transform: translateX(5px);
+        }
+
+        .option.selected {
+            border-color: #667eea;
+            background: #e8eaf6;
+        }
+
+        .option.correct {
+            border-color: #28a745;
+            background: #d4edda;
+        }
+
+        .option.incorrect {
+            border-color: #dc3545;
+            background: #f8d7da;
+        }
+
+        .option-label {
+            font-weight: bold;
+            margin-right: 15px;
+            color: #667eea;
+            min-width: 30px;
+        }
+
+        .option-text {
+            flex: 1;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .question-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .question-grid-item {
+            padding: 10px;
+            text-align: center;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .question-grid-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .question-grid-item.answered {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+
+        .question-grid-item.current {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .question-grid-item.bookmarked {
+            background: #fff3cd;
+            border-color: #ffc107;
+        }
+
+        .results {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .results h2 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 30px;
+        }
+
+        .score-display {
+            font-size: 4em;
+            font-weight: bold;
+            color: #28a745;
+            margin: 30px 0;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .stat-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .stat-card p {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2em;
+            color: #667eea;
+        }
+
+        .batch-selector {
+            padding: 20px 30px;
+            background: #fff;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .batch-selector h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .batch-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .batch-btn {
+            padding: 15px;
+            border: 2px solid #667eea;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .batch-btn:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .batch-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            .question-grid {
+                grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+            }
+
+            .navigation {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔐 CEH 資訊安全認證考試系統</h1>
+            <p>Certified Ethical Hacker - 完整題庫 (740題)</p>
+        </div>
+
+        <div class="batch-selector">
+            <h3>📚 選擇題庫批次：</h3>
+            <div class="batch-buttons">
+                <button class="batch-btn" onclick="loadBatch(1)">第 1 批 (1-100題)</button>
+                <button class="batch-btn" onclick="loadBatch(2)">第 2 批 (101-200題)</button>
+                <button class="batch-btn" onclick="loadBatch(3)">第 3 批 (201-300題)</button>
+                <button class="batch-btn" onclick="loadBatch(4)">第 4 批 (301-400題)</button>
+                <button class="batch-btn" onclick="loadBatch(5)">第 5 批 (401-500題)</button>
+                <button class="batch-btn" onclick="loadBatch(6)">第 6 批 (501-600題)</button>
+                <button class="batch-btn" onclick="loadBatch(7)">第 7 批 (601-700題)</button>
+                <button class="batch-btn" onclick="loadBatch(8)">第 8 批 (701-740題)</button>
+            </div>
+        </div>
+
+        <div class="progress-bar-container">
+            <div class="progress-info">
+                <span>📊 進度：<span id="answered-count">0</span> / <span id="total-count">0</span></span>
+                <span>✅ 答對：<span id="correct-count">0</span></span>
+                <span>❌ 答錯：<span id="incorrect-count">0</span></span>
+                <span>⭐ 標記：<span id="bookmark-count">0</span></span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill">0%</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="🔍 搜尋題目關鍵字...">
+            </div>
+            <button class="btn btn-primary" onclick="showQuestionGrid()">📋 題目總覽</button>
+            <button class="btn btn-warning" onclick="filterBookmarked()">⭐ 已標記</button>
+            <button class="btn btn-info" onclick="showBatchSelector()">📚 切換批次</button>
+            <button class="btn btn-secondary" onclick="resetExam()">🔄 重新開始</button>
+            <button class="btn btn-success" onclick="submitExam()">✅ 提交答案</button>
+        </div>
+
+        <div class="content" id="content">
+            <div class="loading">
+                <h2>📚 請選擇題庫批次</h2>
+                <p>請從上方選擇要練習的題目批次</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 載入題庫檔案 -->
+    <script src="questions-batch1.js"></script>
+    <script src="questions-batch2.js"></script>
+    <script src="questions-batch3.js"></script>
+    <script src="questions-batch4.js"></script>
+    <script src="questions-batch5.js"></script>
+    <script src="questions-batch6.js"></script>
+    <script src="questions-batch7.js"></script>
+    <script src="questions-batch8.js"></script>
+
+    <script>
+        let questions = [];
+        let currentQuestionIndex = 0;
+        let showAnswers = false;
+        let currentBatch = 0;
+
+        // 載入指定批次
+        function loadBatch(batchNumber) {
+            currentBatch = batchNumber;
+            
+            // 根據批次號碼載入對應題庫
+            switch(batchNumber) {
+                case 1: questions = questionsBatch1; break;
+                case 2: questions = questionsBatch2; break;
+                case 3: questions = questionsBatch3; break;
+                case 4: questions = questionsBatch4; break;
+                case 5: questions = questionsBatch5; break;
+                case 6: questions = questionsBatch6; break;
+                case 7: questions = questionsBatch7; break;
+                case 8: questions = questionsBatch8; break;
+            }
+
+            // 更新批次按鈕狀態
+            document.querySelectorAll('.batch-btn').forEach((btn, index) => {
+                btn.classList.toggle('active', index + 1 === batchNumber);
+            });
+
+            currentQuestionIndex = 0;
+            showAnswers = false;
+            loadProgress();
+            displayQuestion();
+        }
+
+        // 顯示批次選擇器
+        function showBatchSelector() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <div class="question-card">
+                    <h2 style="margin-bottom: 20px;">📚 選擇題庫批次</h2>
+                    <div class="batch-buttons">
+                        <button class="batch-btn ${currentBatch === 1 ? 'active' : ''}" onclick="loadBatch(1)">
+                            第 1 批<br>(1-100題)
+                        </button>
+                        <button class="batch-btn ${currentBatch === 2 ? 'active' : ''}" onclick="loadBatch(2)">
+                            第 2 批<br>(101-200題)
+                        </button>
+                        <button class="batch-btn ${currentBatch === 3 ? 'active' : ''}" onclick="loadBatch(3)">
+                            第 3 批<br>(201-300題)
+                        </button>
+                        <button class="batch-btn ${currentBatch === 4 ? 'active' : ''}" onclick="loadBatch(4)">
+                            第 4 批<br>(301-400題)
+                        </button>
+                        <button class="batch-btn ${currentBatch === 5 ? 'active' : ''}" onclick="loadBatch(5)">
+                            第 5 批<br>(401-500題)
+                        </button>
+                        <button class="batch-btn ${currentBatch === 6 ? 'active' : ''}" onclick="loadBatch(6)">
+                            第 6 批<br>(501-600題)
+                        </button>
+                        <button class="batch-btn ${currentBatch === 7 ? 'active' : ''}" onclick="loadBatch(7)">
+                            第 7 批<br>(601-700題)
+                        </button>
+                        <button class="batch-btn ${currentBatch === 8 ? 'active' : ''}" onclick="loadBatch(8)">
+                            第 8 批<br>(701-740題)
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // 顯示題目
+        function displayQuestion() {
+            if (questions.length === 0) {
+                document.getElementById('content').innerHTML = `
+                    <div class="loading">
+                        <h2>📚 請選擇題庫批次</h2>
+                        <p>請從上方選擇要練習的題目批次</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const question = questions[currentQuestionIndex];
+            const content = document.getElementById('content');
+            
+            content.innerHTML = `
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-number">題目 ${currentQuestionIndex + 1} / ${questions.length}</span>
+                        <button class="bookmark-btn ${question.bookmarked ? 'active' : ''}" onclick="toggleBookmark()">
+                            ${question.bookmarked ? '⭐' : '☆'}
+                        </button>
+                    </div>
+                    <div class="question-text">${question.question}</div>
+                    <div class="options">
+                        ${question.options.map((option, index) => `
+                            <div class="option ${getOptionClass(index)}" onclick="selectOption(${index})">
+                                <span class="option-label">${String.fromCharCode(65 + index)})</span>
+                                <span class="option-text">${option.replace(/^[A-D]\)\s*/, '')}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="navigation">
+                        <button class="btn btn-secondary" onclick="previousQuestion()" ${currentQuestionIndex === 0 ? 'disabled' : ''}>
+                            ⬅️ 上一題
+                        </button>
+                        <button class="btn btn-primary" onclick="nextQuestion()" ${currentQuestionIndex === questions.length - 1 ? 'disabled' : ''}>
+                            下一題 ➡️
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            updateProgress();
+            saveProgress();
+        }
+
+        // 取得選項樣式
+        function getOptionClass(index) {
+            const question = questions[currentQuestionIndex];
+            let classes = [];
+            
+            if (question.userAnswer === index) {
+                classes.push('selected');
+            }
+            
+            if (showAnswers) {
+                if (index === question.correctAnswer) {
+                    classes.push('correct');
+                } else if (question.userAnswer === index && index !== question.correctAnswer) {
+                    classes.push('incorrect');
+                }
+            }
+            
+            return classes.join(' ');
+        }
+
+        // 選擇選項
+        function selectOption(index) {
+            questions[currentQuestionIndex].userAnswer = index;
+            displayQuestion();
+        }
+
+        // 切換標記
+        function toggleBookmark() {
+            questions[currentQuestionIndex].bookmarked = !questions[currentQuestionIndex].bookmarked;
+            displayQuestion();
+        }
+
+        // 上一題
+        function previousQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                displayQuestion();
+            }
+        }
+
+        // 下一題
+        function nextQuestion() {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                displayQuestion();
+            }
+        }
+
+        // 顯示題目總覽
+        function showQuestionGrid() {
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <div class="question-card">
+                    <h2 style="margin-bottom: 20px;">📋 題目總覽</h2>
+                    <div class="filter-buttons">
+                        <button class="btn btn-primary" onclick="displayQuestion()">返回答題</button>
+                        <button class="btn btn-secondary" onclick="filterAll()">全部題目</button>
+                        <button class="btn btn-success" onclick="filterAnswered()">已作答</button>
+                        <button class="btn btn-warning" onclick="filterBookmarked()">已標記</button>
+                    </div>
+                    <div class="question-grid" id="question-grid">
+                        ${questions.map((q, index) => `
+                            <div class="question-grid-item ${getGridItemClass(index)}" onclick="goToQuestion(${index})">
+                                ${index + 1}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        // 取得題目格子樣式
+        function getGridItemClass(index) {
+            const question = questions[index];
+            let classes = [];
+            
+            if (index === currentQuestionIndex) {
+                classes.push('current');
+            } else if (question.bookmarked) {
+                classes.push('bookmarked');
+            } else if (question.userAnswer !== null) {
+                classes.push('answered');
+            }
+            
+            return classes.join(' ');
+        }
+
+        // 跳到指定題目
+        function goToQuestion(index) {
+            currentQuestionIndex = index;
+            displayQuestion();
+        }
+
+        // 篩選功能
+        function filterAll() {
+            showQuestionGrid();
+        }
+
+        function filterAnswered() {
+            const content = document.getElementById('content');
+            const answeredQuestions = questions.map((q, i) => ({q, i})).filter(({q}) => q.userAnswer !== null);
+            
+            content.innerHTML = `
+                <div class="question-card">
+                    <h2 style="margin-bottom: 20px;">✅ 已作答題目 (${answeredQuestions.length})</h2>
+                    <div class="filter-buttons">
+                        <button class="btn btn-primary" onclick="displayQuestion()">返回答題</button>
+                        <button class="btn btn-secondary" onclick="showQuestionGrid()">全部題目</button>
+                    </div>
+                    <div class="question-grid">
+                        ${answeredQuestions.map(({q, i}) => `
+                            <div class="question-grid-item answered" onclick="goToQuestion(${i})">
+                                ${i + 1}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function filterBookmarked() {
+            const content = document.getElementById('content');
+            const bookmarkedQuestions = questions.map((q, i) => ({q, i})).filter(({q}) => q.bookmarked);
+            
+            content.innerHTML = `
+                <div class="question-card">
+                    <h2 style="margin-bottom: 20px;">⭐ 已標記題目 (${bookmarkedQuestions.length})</h2>
+                    <div class="filter-buttons">
+                        <button class="btn btn-primary" onclick="displayQuestion()">返回答題</button>
+                        <button class="btn btn-secondary" onclick="showQuestionGrid()">全部題目</button>
+                    </div>
+                    <div class="question-grid">
+                        ${bookmarkedQuestions.map(({q, i}) => `
+                            <div class="question-grid-item bookmarked" onclick="goToQuestion(${i})">
+                                ${i + 1}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        // 更新進度
+        function updateProgress() {
+            const answeredCount = questions.filter(q => q.userAnswer !== null).length;
+            const correctCount = questions.filter(q => q.userAnswer === q.correctAnswer).length;
+            const incorrectCount = questions.filter(q => q.userAnswer !== null && q.userAnswer !== q.correctAnswer).length;
+            const bookmarkCount = questions.filter(q => q.bookmarked).length;
+            
+            document.getElementById('answered-count').textContent = answeredCount;
+            document.getElementById('total-count').textContent = questions.length;
+            document.getElementById('correct-count').textContent = correctCount;
+            document.getElementById('incorrect-count').textContent = incorrectCount;
+            document.getElementById('bookmark-count').textContent = bookmarkCount;
+            
+            const progress = questions.length > 0 ? (answeredCount / questions.length * 100).toFixed(1) : 0;
+            const progressFill = document.getElementById('progress-fill');
+            progressFill.style.width = progress + '%';
+            progressFill.textContent = progress + '%';
+        }
+
+        // 提交答案
+        function submitExam() {
+            const answeredCount = questions.filter(q => q.userAnswer !== null).length;
+            
+            if (answeredCount < questions.length) {
+                if (!confirm(`您還有 ${questions.length - answeredCount} 題未作答，確定要提交嗎？`)) {
+                    return;
+                }
+            }
+            
+            showAnswers = true;
+            showResults();
+        }
+
+        // 顯示結果
+        function showResults() {
+            const correctCount = questions.filter(q => q.userAnswer === q.correctAnswer).length;
+            const incorrectCount = questions.filter(q => q.userAnswer !== null && q.userAnswer !== q.correctAnswer).length;
+            const unansweredCount = questions.filter(q => q.userAnswer === null).length;
+            const score = questions.length > 0 ? (correctCount / questions.length * 100).toFixed(1) : 0;
+            
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <div class="results">
+                    <h2>🎉 考試完成！</h2>
+                    <div class="score-display">${score}%</div>
+                    <div class="stats">
+                        <div class="stat-card">
+                            <h3>✅ 答對</h3>
+                            <p>${correctCount}</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>❌ 答錯</h3>
+                            <p>${incorrectCount}</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>⚪ 未作答</h3>
+                            <p>${unansweredCount}</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>📊 總題數</h3>
+                            <p>${questions.length}</p>
+                        </div>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <button class="btn btn-primary" onclick="reviewAnswers()">📝 檢視答案</button>
+                        <button class="btn btn-secondary" onclick="resetExam()">🔄 重新開始</button>
+                        <button class="btn btn-info" onclick="showBatchSelector()">📚 切換批次</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // 檢視答案
+        function reviewAnswers() {
+            currentQuestionIndex = 0;
+            displayQuestion();
+        }
+
+        // 重新開始
+        function resetExam() {
+            if (confirm('確定要重新開始嗎？所有作答記錄將被清除。')) {
+                questions.forEach(q => {
+                    q.userAnswer = null;
+                    q.bookmarked = false;
+                });
+                currentQuestionIndex = 0;
+                showAnswers = false;
+                localStorage.removeItem(`examProgress_batch${currentBatch}`);
+                displayQuestion();
+            }
+        }
+
+        // 搜尋功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('search-input');
+            if (searchInput) {
+                searchInput.addEventListener('input', function(e) {
+                    const keyword = e.target.value.toLowerCase();
+                    if (keyword.length < 2) return;
+                    
+                    const results = questions.map((q, i) => ({q, i}))
+                        .filter(({q}) => q.question.toLowerCase().includes(keyword));
+                    
+                    if (results.length > 0) {
+                        const content = document.getElementById('content');
+                        content.innerHTML = `
+                            <div class="question-card">
+                                <h2 style="margin-bottom: 20px;">🔍 搜尋結果 (${results.length})</h2>
+                                <div class="filter-buttons">
+                                    <button class="btn btn-primary" onclick="displayQuestion()">返回答題</button>
+                                </div>
+                                <div class="question-grid">
+                                    ${results.map(({q, i}) => `
+                                        <div class="question-grid-item" onclick="goToQuestion(${i})">
+                                            ${i + 1}
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        `;
+                    }
+                });
+            }
+        });
+
+        // 儲存進度
+        function saveProgress() {
+            if (currentBatch > 0) {
+                localStorage.setItem(`examProgress_batch${currentBatch}`, JSON.stringify({
+                    questions: questions,
+                    currentIndex: currentQuestionIndex,
+                    showAnswers: showAnswers
+                }));
+            }
+        }
+
+        // 載入進度
+        function loadProgress() {
+            if (currentBatch > 0) {
+                const saved = localStorage.getItem(`examProgress_batch${currentBatch}`);
+                if (saved) {
+                    const data = JSON.parse(saved);
+                    if (data.questions && data.questions.length > 0) {
+                        questions = data.questions;
+                        currentQuestionIndex = data.currentIndex || 0;
+                        showAnswers = data.showAnswers || false;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
