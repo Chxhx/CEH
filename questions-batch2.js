@@ -340,7 +340,7 @@ const questionsBatch2 = [
     },
     {
         id: 127,
-        question: "During a red team assessment of an enterprise LAN environment, the tester launches a MAC flooding attack using the macof utility. Soon after, the tester observes unicast traffic between different internal machines appearing in their packet sniffer.\n\nWhat internal switch behavior is responsible for this sudden exposure of isolated traffic?",
+        question: "During a red team assessment of an enterprise LAN environment, the tester discovers an access switch that connects multiple internal workstations. The switch has no port security measures in place. To silently intercept communication between different hosts without deploying ARP poisoning or modifying the routing table, the tester launches a MAC flooding attack using the macof utility from the dsniff suite. This command sends thousands of Ethernet frames per minute, each with a random, spoofed source MAC addresses. Soon after the flooding begins, the tester puts their network interface into promiscuous mode and starts capturing packets. They observe unicast traffic between different internal machines appearing in their packet sniffer – traffic that should have only reached specific destinations on the network.What internal switch behavior is responsible for this sudden exposure of isolated traffic?",
         options: [
             "The interface performed DHCP starvation to capture broadcasts.",
             "The switch disabled MAC filtering due to duplicate address conflicts.",
@@ -366,7 +366,7 @@ const questionsBatch2 = [
     },
     {
         id: 129,
-        question: "During an internal security assessment, a security analyst notices an unusual spike in ARP traffic. Closer inspection reveals that one particular MAC address is associated with multiple IP addresses across different subnets. The ARP packets were unsolicited replies rather than requests.\n\nWhat is the most likely cause of this abnormal behavior?",
+        question: "During an internal security assessment of a medium-sized enterprise network, a security analyst notices an unusual spike in ARP traffic. Closer inspectionreveals that one particular MAC address is associated with multiple IP addresses across different subnets. The ARP packets were unsolicited replies rather than requests, and several employees from different departments have reported intermittent connection drops, failed logins, and broken intranet sessions.The analyst suspects an intentional interference on the local network segment.What is the most likely cause of this abnormal behavior?",
         options: [
             "ARP poisoning causing routing inconsistencies",
             "DHCP snooping improperly configured",
@@ -600,7 +600,7 @@ const questionsBatch2 = [
     },
     {
         id: 147,
-        question: "During a security assessment of a cloud-hosted application using SOAP-based web services, a red team operator intercepts a legitimate SOAP request, duplicates the body along with its digital signature, and inserts the duplicate into the same SOAP envelope. The server accepts the duplicated body as authentic and processes it.\n\nWhat type of attack does this scenario illustrate?",
+        question: "During a security assessment of a cloud-hosted application using SOAP-based web services, a red team operator intercepts a legitimate SOAP request sent by a user. The operator duplicates the body of the message along with its digital signature, inserts the duplicate into the same SOAP envelope, and forwards it to the server. Due to improper validation of the message structure, the server accepts the duplicated body as authentic and processes it, resulting in unauthorized code execution. This behavior reveals a vulnerability in how the server handles signed SOAP messages.What type of attack does this scenario illustrate?",
         options: [
             "Wrapping attack",
             "Cryptanalysis attack",
@@ -808,7 +808,7 @@ const questionsBatch2 = [
     },
     {
         id: 163,
-        question: "A penetration tester is conducting an external assessment of a corporate web server. They access https://www.targetcorp.com/robots.txt and observe multiple Disallow entries that reference directories such as /admin-panel/, /backup/, and /confidential_docs/. When the tester directly visits these paths, they find that access is not restricted by authentication.\n\nWhich stage of the web server attack methodology is demonstrated in this scenario?",
+        question: "A penetration tester is conducting an external assessment of a corporate web server. They start by accessing https://www.targetcorp.com/robots.txt and observe multiple Disallow entries that reference directories such as /admin-panel/, /backup/, and /confidential_docs/. When the tester directly visits these paths via browser, they find that access is not restricted by authentication and gain access to sensitive files, including server configuration and unprotected credentials.Which stage of the web server attack methodology is demonstrated in this scenario?",
         options: [
             "Performing a cross-site request forgery (CSRF) attack to manipulate user actions.",
             "Gathering information through exposed indexing instructions.",
@@ -834,7 +834,7 @@ const questionsBatch2 = [
     },
     {
         id: 165,
-        question: "During routine network monitoring, the blue team notices several LLMNR and NBT-NS broadcasts originating from a workstation attempting to resolve an internal hostname. They also observe suspicious responses coming from a non-corporate IP address that claims to be the requested host.\n\nWhat type of password-cracking setup is likely being staged?",
+        question: "During routine network monitoring, the blue team notices several LLMNR and NBT-NS broadcasts originating from a workstation attempting to resolve an internal hostname. They also observe suspicious responses coming from a non-corporate IP address that claims to be the requested host. Upon further inspection, the security team suspects that an attacker is impersonating network resources to capture authentication attempts.What type of password-cracking setup is likely being staged?",
         options: [
             "Decrypt login tokens from wireless networks.",
             "Match captured credentials with rainbow tables.",
@@ -964,7 +964,7 @@ const questionsBatch2 = [
     },
     {
         id: 175,
-        question: "During a comprehensive security audit of a financial institution's online infrastructure, a penetration tester observes abnormal traffic redirection patterns. Customers attempting to access the legitimate website are seamlessly redirected to a visually identical phishing page. After tracing the DNS resolution path, the tester discovers that the authoritative DNS server has been compromised.\n\nWhich technique is being used in this scenario?",
+        question: "During a comprehensive security audit of a financial institution’s online infrastructure, a penetration tester observes abnormal traffic redirection patterns affecting the institution’s primary domain. Customers who attempt to access the legitimate website are seamlessly redirected to a visually identical phishing page, hosted on a suspicious IP address. After tracing the DNS resolution path, the tester discovers that the authoritative DNS server has been compromised, and its records have been altered to point to the attacker’s server. The redirection affects all DNS queries for the domain, indicating unauthorized control over name resolution infrastructure, rather than local cache poisoning or client-side manipulation. The tester confirms that this redirection was achieved by tampering with the DNS zone records themselves.Which technique is being used in this scenario?",
         options: [
             "Carry out DNS server hijacking by tampering with the legitimate name resolution infrastructure.",
             "Perform DNS rebinding in the import functionality to manipulate browser-origin interactions.",
@@ -990,7 +990,7 @@ const questionsBatch2 = [
     },
     {
         id: 177,
-        question: "A red team operator wants to obtain credentials from a Windows machine without touching the LSASS process memory. Instead, they leverage a method that uses the Security Support Provider Interface (SSPI) to generate NetNTLM responses within the context of the logged-in user.\n\nWhich attack technique is being used in this scenario?",
+        question: "A red team operator wants to obtain credentials from a Windows machine without touching the LSASS process memory, as security controls and Credential Guard are active. Instead, they leverage a method that uses the SecuritySupport Provider Interface (SSPI to generate NetNTLM responses within the context of the logged-in user and collect those responses for offline cracking.Which attack technique is being used in this scenario?",
         options: [
             "Internal Monologue attack technique executed through OS authentication protocol manipulations.",
             "Replay attack attempt by reusing captured authentication traffic sequences.",
