@@ -314,7 +314,7 @@ const questionsBatch2 = [
     },
     {
         id: 125,
-        question: "A penetration tester is hired by a company to assess its vulnerability to social engineering attacks targeting its IT department. The tester decides to use a sophisticated pretext involving technical jargon and insider information.\n\nWhat is the most effective social engineering technique the tester should employ?",
+        question: "A penetration tester is hired by a company to assess its vulnerability to social engineering attacks targeting its IT department. The tester decides to use a sophisticated pretext involving technical jargon and insider information to deceive employees into revealing their network credentials.What is the most effective social engineering technique the tester should employ to maximize the chances of obtaining valid credentials without raising suspicion?",
         options: [
             "Create a convincing fake IT support portal that mimics the company's internal systems",
             "Send a generic phishing email with a malicious attachment to multiple employees",
