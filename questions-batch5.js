@@ -3,7 +3,7 @@ const questionsBatch5 = [
         "id": 401,
         "question": "During a penetration test at a manufacturing company in Detroit, Amanda, a senior security consultant, scans several legacy Linux servers. On one host, she discovers an open port used for file transfer that allows anonymous login. Once connected, she is able to view the directory structure and check available files, which helps her identify potential sensitive information exposure. She also notices background traffic on a UDP service related to NetBIOS name lookups, but she continues probing the file transfer service to confirm user access weaknesses.\n\nWhich ports and services should Amanda prioritize for this enumeration activity?",
         "options": [
-            "TCP 21 and UDP 137 (Correct Answer)",
+            "TCP 21 and UDP 137",
             "TCP 139 and UDP 137, 138",
             "TCP 23 and UDP 137, 138",
             "TCP 25 and UDP 138"
@@ -19,7 +19,7 @@ const questionsBatch5 = [
             "Utilize secure communication protocols",
             "Allow code signing",
             "Secure firmware or software updates",
-            "Ensure secure boot (Correct Answer)"
+            "Ensure secure boot"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -32,7 +32,7 @@ const questionsBatch5 = [
             "UDP Flood",
             "Slowloris",
             "Peer-to-Peer Attack",
-            "HTTP GET/POST Attack (Correct Answer)"
+            "HTTP GET/POST Attack"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -44,7 +44,7 @@ const questionsBatch5 = [
         "options": [
             "Misconfigured AP",
             "Honeypot AP",
-            "Rogue AP (Correct Answer)",
+            "Rogue AP",
             "Evil Twin AP"
         ],
         "correctAnswer": 2,
@@ -57,7 +57,7 @@ const questionsBatch5 = [
         "options": [
             "Lack of password protection",
             "Insecure routing protocols",
-            "Lack of authentication (Correct Answer)",
+            "Lack of authentication",
             "Firewall vulnerabilities"
         ],
         "correctAnswer": 2,
@@ -70,7 +70,7 @@ const questionsBatch5 = [
         "options": [
             "Conduct security awareness programs",
             "Use two-factor authentication",
-            "Employees must verify the identity of individuals requesting information (Correct Answer)",
+            "Employees must verify the identity of individuals requesting information",
             "Establish policies and procedures"
         ],
         "correctAnswer": 2,
@@ -81,7 +81,7 @@ const questionsBatch5 = [
         "id": 407,
         "question": "During a penetration test at a shipping company in Miami, ethical hacker Daniel delivers a disguised email attachment containing a hidden payload. Once executed by employees, the compromised workstations begin to silently communicate with a remote server under Daniel’s control. Over the following week, he confirms that multiple infected endpoints can receive synchronized commands and perform background tasks simultaneously, including sending bursts of outbound traffic on demand.\n\nWhich type of malicious component is Daniel most likely simulating in this assessment?",
         "options": [
-            "Botnet Agents (Correct Answer)",
+            "Botnet Agents",
             "Scareware",
             "Spyware",
             "Potentially Unwanted Applications (PUAs)"
@@ -97,7 +97,7 @@ const questionsBatch5 = [
             "Fingerprinting the Running Service",
             "Analyzing System Configuration and Metadata",
             "Analyzing MAC Address",
-            "Analyzing Response Time (Correct Answer)"
+            "Analyzing Response Time "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -110,7 +110,7 @@ const questionsBatch5 = [
             "Insecure Communication",
             "Inadequate Privacy Controls",
             "Improper Credential Usage",
-            "Insecure Data Storage (Correct Answer)"
+            "Insecure Data Storage"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -122,7 +122,7 @@ const questionsBatch5 = [
         "options": [
             "On-demand self-service",
             "Broad network access",
-            "Measured service (Correct Answer)",
+            "Measured service",
             "Resource pooling"
         ],
         "correctAnswer": 2,
@@ -134,7 +134,7 @@ const questionsBatch5 = [
         "question": "During a red team engagement at a retail company in Atlanta, ethical hacker James crafts a session with the company’s shopping portal and deliberately shares that session ID with an unsuspecting employee by embedding it in a link. When the employee clicks and logs in, their activity is bound to the attacker’s pre-assigned session. Later, James retrieves the employee’s input from that same session to demonstrate the flaw to management.\n\nWhich session hijacking technique is James most likely using?",
         "options": [
             "Session Prediction",
-            "Session Fixation Attack (Correct Answer)",
+            "Session Fixation Attack",
             "Session Replay Attack",
             "Session Donation Attack"
         ],
@@ -148,7 +148,7 @@ const questionsBatch5 = [
         "options": [
             "Authentication system used by sender’s mail server",
             "Sender’s IP address",
-            "Sender’s mail server (Correct Answer)",
+            "Sender’s mail server",
             "Date and time of message sent"
         ],
         "correctAnswer": 2,
@@ -162,7 +162,7 @@ const questionsBatch5 = [
             "Remediation",
             "Monitoring",
             "Risk Assessment",
-            "Verification (Correct Answer)"
+            "Verification"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -173,7 +173,7 @@ const questionsBatch5 = [
         "question": "At a federal research agency, cybersecurity officer Nikhil is drafting a vulnerability assessment report. In this section, he documents the scanning methodology used, the information about the targets, the type and scope of scans performed, and the tools involved. He does not yet include specific vulnerabilities or affected assets, as this portion of the report is meant to provide context for how the assessment was conducted. Which section of the vulnerability assessment report is Nikhil working on?",
         "options": [
             "Risk Assessment",
-            "Assessment Overview (Correct Answer)",
+            "Assessment Overview",
             "Supporting Information",
             "Findings"
         ],
@@ -188,7 +188,7 @@ const questionsBatch5 = [
             "Email footprinting",
             "DNS interrogation",
             "Network footprinting",
-            "Whois lookup (Correct Answer)"
+            "Whois lookup"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -199,7 +199,7 @@ const questionsBatch5 = [
         "question": "You are an ethical hacker at Titan Cyber Defense, hired by BrightWave Publishing in New York City to assess the security of their content management system (CMS). While testing the article search function, you input malformed strings such as multiple single quotes. The application responds with system feedback that unexpectedly reveals the database type and internal query structure, including table and column information. You use these disclosures to better understand how the backend query is built.\n\nWhich of the following methods to detect SQL injection are you employing?",
         "options": [
             "Fuzz Testing",
-            "Testing String (Correct Answer)",
+            "Testing String",
             "Dynamic Testing",
             "Function Testing"
         ],
@@ -213,7 +213,7 @@ const questionsBatch5 = [
         "options": [
             "Null Byte",
             "Hex Encoding",
-            "In-line Comment (Correct Answer)",
+            "In-line Comment",
             "String Concatenation"
         ],
         "correctAnswer": 2,
@@ -225,7 +225,7 @@ const questionsBatch5 = [
         "question": "During a physical penetration test at Sterling Electronics in Cleveland, ethical hacker Priya waits near the employee entrance during a shift change. When a group of staff enters the building using their access cards, Priya closely follows behind without swiping her own badge. None of the employees confront her, assuming she belongs there. Once inside, Priya proceeds to the break area where she documents the success of the exercise.\n\nWhich social engineering technique is Priya demonstrating?",
         "options": [
             "Dumpster Diving",
-            "Tailgating (Correct Answer)",
+            "Tailgating",
             "Shoulder Surfing",
             "Piggybacking"
         ],
@@ -237,7 +237,7 @@ const questionsBatch5 = [
         "id": 419,
         "question": "During a penetration test at Greenview Credit Union in Chicago, Illinois, ethical hacker Rebecca Hayes simulates an attacker who contacts employees using a voice channel. The number displayed on their devices appears identical to the institution’s official line, convincing staff that the request is legitimate. Rebecca then asks for account credentials under the pretense of a mandatory security check.\n\nWhich mobile attack vector is she demonstrating?",
         "options": [
-            "Call Spoofing (Correct Answer)",
+            "Call Spoofing",
             "SMiShing",
             "OTP Hijacking",
             "Bluebugging"
@@ -251,7 +251,7 @@ const questionsBatch5 = [
         "question": "During a stealth penetration test at a defense research facility, ethical hacker Daniel installs a payload that survives even after multiple operating system reinstalls. The implant resides deep inside the system hardware and executes before the OS is loaded, ensuring that forensic scans and antivirus tools at the OS level cannot detect or remove it. Administrators notice unusual activity on network cards and storage devices, but repeated scans show no malware traces within the file system. Which type of rootkit most likely enabled this level of persistence?",
         "options": [
             "Hypervisor-Level Rootkit",
-            "Hardware/Firmware Rootkit (Correct Answer)",
+            "Hardware/Firmware Rootkit",
             "Kernel-Level Rootkit",
             "Boot-Loader-Level Rootkit"
         ],
@@ -266,7 +266,7 @@ const questionsBatch5 = [
             "Tiny Fragments",
             "Source Routing",
             "DNS Tunneling",
-            "HTTP Tunneling (Correct Answer)"
+            "HTTP Tunneling"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -278,7 +278,7 @@ const questionsBatch5 = [
         "options": [
             "Second-Order SQL Injection",
             "Blind SQL Injection",
-            "UNION SQL Injection (Correct Answer)",
+            "UNION SQL Injection",
             "Error-Based SQL Injection"
         ],
         "correctAnswer": 2,
@@ -289,7 +289,7 @@ const questionsBatch5 = [
         "id": 423,
         "question": "During a red team exercise at Apex Logistics in Denver, ethical hacker Rachel launches controlled packet injection attacks to simulate session hijacking attempts. The client’s IT team wants a way to automatically detect such abnormal behaviors across the network in real time, instead of relying on manual analysis. They decide to deploy a monitoring system capable of flagging suspicious session activity based on predefined rules and traffic signatures.\n\nWhich detection method best fits the IT team’s requirement?",
         "options": [
-            "Use an Intrusion Detection System (IDS) (Correct Answer)",
+            "Use an Intrusion Detection System (IDS)",
             "Monitor for ACK storms",
             "Perform manual packet analysis using sniffing tools",
             "Check for predictable session tokens"
@@ -304,7 +304,7 @@ const questionsBatch5 = [
         "options": [
             "Social Searcher",
             "Sherlock",
-            "Creepy (Correct Answer)",
+            "Creepy ",
             "Maltego"
         ],
         "correctAnswer": 2,
@@ -318,7 +318,7 @@ const questionsBatch5 = [
             "Application Scanning",
             "Host-based Scanning",
             "External Scanning",
-            "Network-based Scanning (Correct Answer)"
+            "Network-based Scanning "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -331,7 +331,7 @@ const questionsBatch5 = [
             "ElGamal",
             "Diffie-Hellman",
             "RSA",
-            "DSA (Correct Answer)"
+            "DSA "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -344,7 +344,7 @@ const questionsBatch5 = [
             "Measured service",
             "Resource pooling",
             "Broad network access",
-            "On-demand self-service (Correct Answer)"
+            "On-demand self-service "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -355,7 +355,7 @@ const questionsBatch5 = [
         "question": "During a security assessment for an e-commerce company in Boston, Massachusetts, your team conducts a reconnaissance phase to identify potential entry points into the organization’s communication infrastructure. You focus on gathering details about the systems responsible for handling incoming email traffic, avoiding active network probing, and relying on passive DNS data collection. Given this objective, which DNS record type should you query to extract information about the target’s mail server configuration?",
         "options": [
             "TXT",
-            "MX (Correct Answer)",
+            "MX ",
             "NS",
             "SOA"
         ],
@@ -367,7 +367,7 @@ const questionsBatch5 = [
         "id": 429,
         "question": "In the sunlit tech oasis of Phoenix, Arizona, ethical hacker Nadia Patel explores the security posture of LearnSphere, a U.S.-based e-learning platform serving thousands of students. During her testing, Nadia intentionally submits invalid inputs to the platform’s content delivery system. Instead of returning a generic failure notice, the application responds with detailed system information, including database query strings and directory paths. Such responses provide attackers with valuable insights into the application’s internal workings, which could be used to craft more precise and damaging attacks.",
         "options": [
-            "Verbose Error Messages (Correct Answer)",
+            "Verbose Error Messages ",
             "CORS Misconfiguration",
             "Directory Traversal",
             "Improper Error Handling"
@@ -380,7 +380,7 @@ const questionsBatch5 = [
         "id": 430,
         "question": "You are an ethical hacker at RedOak Cyber Solutions, contracted to perform a penetration test for MetroHealth Hospital in Cleveland, Ohio. While assessing the hospital’s appointment booking portal, you craft and submit multiple malicious inputs into the patient search field. One of your payloads successfully manipulates the backend query, returning additional appointment data that was not intended to be displayed.\n\nBased on the observed behavior, which step of the SQL injection methodology are you performing?",
         "options": [
-            "Launching SQL Injection Attacks (Correct Answer)",
+            "Launching SQL Injection Attacks ",
             "Database Enumeration",
             "Information Gathering and Vulnerability Detection",
             "Identifying Data Entry Paths"
@@ -395,7 +395,7 @@ const questionsBatch5 = [
         "options": [
             "Self-healing",
             "Kube-controller-manager",
-            "Container orchestration (Correct Answer)",
+            "Container orchestration ",
             "Container vulnerabilities"
         ],
         "correctAnswer": 2,
@@ -406,7 +406,7 @@ const questionsBatch5 = [
         "id": 432,
         "question": "During a penetration test at Cascade Financial in Seattle, ethical hacker Elena Vasquez probes the input handling of the company’s web server. She discovers that a single crafted request is processed as two separate ones, allowing her to inject malicious data into the server’s communication. This type of attack falls into the same category of input validation flaws as cross-site scripting (XSS), cross-site request forgery (CSRF), and SQL injection.\n\nWhich type of web server attack is Elena most likely demonstrating?",
         "options": [
-            "HTTP Response Splitting Attack (Correct Answer)",
+            "HTTP Response Splitting Attack",
             "Password Cracking Attack",
             "Web Cache Poisoning Attack",
             "Directory Traversal Attack"
@@ -421,7 +421,7 @@ const questionsBatch5 = [
         "options": [
             "Frontjacking",
             "File Upload Exploits",
-            "Website Defacement (Correct Answer)",
+            "Website Defacement ",
             "DNS Hijacking"
         ],
         "correctAnswer": 2,
@@ -435,7 +435,7 @@ const questionsBatch5 = [
             "DeFi Sandwich Attack",
             "Finney Attack",
             "51% Attack",
-            "Eclipse Attack (Correct Answer)"
+            "Eclipse Attack"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -445,7 +445,7 @@ const questionsBatch5 = [
         "id": 435,
         "question": "During a penetration test for a U.S.-based retail company, John gains access to a secondary server that responds unusually to structured queries. By sending a specially crafted request, he receives a full list of subdomains, MX records, and aliases belonging to the target organization. The response exposes sensitive internal mappings that could be leveraged for further attacks.\n\nWhich tool was MOST likely used to perform this enumeration?",
         "options": [
-            "dig @ axfr (Correct Answer)",
+            "dig @ axfr ",
             "nbtstat -A",
             "ldapsearch -h -x",
             "smtp-user-enum.pl -u user -t host"
@@ -458,7 +458,7 @@ const questionsBatch5 = [
         "id": 436,
         "question": "You are a wireless auditor at SeaFront Labs in San Diego, California, engaged to review the radio-layer protections used by a biotech research facility. While capturing traffic in monitor mode, you observe frames that include a CCMP-like header and AES-based encryption, and you note the use of a four-way handshake with a packet number (PN) for replay protection – features that were introduced to replace older TKIP/RC4 approaches. Based on these observed characteristics, which wireless encryption protocol is the access point most likely using?",
         "options": [
-            "WPA2 (Correct Answer)",
+            "WPA2 ",
             "WPA",
             "WEP",
             "WPA3"
@@ -472,7 +472,7 @@ const questionsBatch5 = [
         "question": "During a red team engagement at a law firm in Dallas, ethical hacker Sarah connects a compromised workstation to a core switch. Within minutes, the switch begins experiencing instability, and multiple VLANs report traffic leakage across isolated departments. Sarah observes that her machine is now receiving packets not originally destined for it, giving her visibility into multiple active sessions. Logs show the switch’s CAM table was overwhelmed during the attack.\n\nWhich sniffing technique did Sarah most likely use?",
         "options": [
             "ARP Poisoning",
-            "MAC Flooding (Correct Answer)",
+            "MAC Flooding ",
             "VLAN Hopping",
             "DNS Poisoning"
         ],
@@ -484,7 +484,7 @@ const questionsBatch5 = [
         "id": 438,
         "question": "At Apex Financial Services in Houston, Texas, ethical hacker Javier Ruiz evaluates mobile security practices under the company’s BYOD policy. He demonstrates that employees often install applications that request access to contact lists, cameras, and messaging services, even though these functions are unrelated to the apps’ intended purpose. This behavior allows a malicious program to harvest sensitive corporate information. Which security guideline would most directly prevent this issue?",
         "options": [
-            "Review permissions requested by apps before installing them (Correct Answer)",
+            "Review permissions requested by apps before installing them ",
             "Use encryption mechanisms to store data",
             "Set passwords for apps to restrict others from accessing them",
             "Enforce automatic device locking or implement biometric authentication"
@@ -497,7 +497,7 @@ const questionsBatch5 = [
         "id": 439,
         "question": "During a red team engagement at a technology startup in Austin, ethical hacker Priya simulates an internal attacker by connecting a laptop to the corporate LAN. Within minutes, nearby workstations begin receiving incorrect network settings such as altered gateways and DNS servers. Employees trying to access the intranet are redirected to fake login portals hosted on Priya’s machine. Security tools record temporary IP conflicts, but no alerts are triggered against the altered traffic paths.\n\nWhich attack technique did Priya most likely use?",
         "options": [
-            "Rogue DHCP Server Attack (Correct Answer)",
+            "Rogue DHCP Server Attack ",
             "DNS Cache Poisoning",
             "Packet Sniffing",
             "DHCP Starvation Attack"
@@ -512,7 +512,7 @@ const questionsBatch5 = [
         "options": [
             "TCP Flow Control Method",
             "Direct TTL Probes",
-            "IP Identification Number (IPID) Monitoring (Correct Answer)",
+            "IP Identification Number (IPID) Monitoring",
             "Packet Filtering"
         ],
         "correctAnswer": 2,
@@ -525,7 +525,7 @@ const questionsBatch5 = [
         "options": [
             "Network-Based Intrusion Detection System",
             "Network-Based Firewall",
-            "Host-Based Intrusion Detection System (Correct Answer)",
+            "Host-Based Intrusion Detection System",
             "Host-Based Firewall"
         ],
         "correctAnswer": 2,
@@ -536,7 +536,7 @@ const questionsBatch5 = [
         "id": 442,
         "question": "During a red team assessment at Sunshine Credit Union in Miami, ethical hacker Laura demonstrates a weakness in the company’s session handling process. She shows that once a user logs in, the same authentication token assigned before login continues to be valid without being refreshed. Laura explains that an attacker could exploit this flaw by tricking a victim into authenticating with a value already known to the attacker, gaining access afterward. To mitigate this risk, the IT team agrees to apply a countermeasure focused on proper session lifecycle management.\n\nWhich countermeasure should the IT team implement?",
         "options": [
-            "Regenerate the session ID after a successful login to prevent session fixation attacks (Correct Answer)",
+            "Regenerate the session ID after a successful login to prevent session fixation attacks",
             "Do not create sessions for unauthenticated users unless necessary",
             "Use restrictive cache directives for all the web traffic through HTTP and HTTPS",
             "Implement SSL to encrypt all information in transit via the network"
@@ -551,7 +551,7 @@ const questionsBatch5 = [
         "options": [
             "Perform user input validation",
             "Encoding the single quote",
-            "Use parameterized queries or prepared statements (Correct Answer)",
+            "Use parameterized queries or prepared statements",
             "Restrict database access"
         ],
         "correctAnswer": 2,
@@ -562,7 +562,7 @@ const questionsBatch5 = [
         "id": 444,
         "question": "A financial institution in San Francisco suffers a breach where attackers install malware that captures customer account credentials. The stolen data is then sold on underground forums for profit. No political or social statements are made, and the attackers remain anonymous while continuing to target similar organizations for financial gain. Based on this activity, what category of hacker is most likely responsible?",
         "options": [
-            "Black Hat hackers (Correct Answer)",
+            "Black Hat hackers",
             "Hacktivists",
             "Script Kiddies",
             "White Hat hackers"
@@ -578,7 +578,7 @@ const questionsBatch5 = [
             "Cross-Site Scripting (XSS)",
             "LDAP Injection",
             "SQL Injection",
-            "Shell Injection (Correct Answer)"
+            "Shell Injection"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -588,7 +588,7 @@ const questionsBatch5 = [
         "id": 446,
         "question": "During a red team assessment at New England Insurance in Boston, ethical hacker Daniel sends a series of spoofed TCP packets carrying the reset flag to a server hosting client applications. As a result, several active sessions between employees and the server are abruptly terminated, causing temporary disruption of legitimate work. Daniel uses this demonstration to highlight how attackers can forcibly tear down sessions without completing a full hijack.\n\nWhich type of network-level session hijacking technique is Daniel simulating?",
         "options": [
-            "RST Hijacking (Correct Answer)",
+            "RST Hijacking",
             "UDP Hijacking",
             "Blind Hijacking",
             "TCP/IP Hijacking"
@@ -604,7 +604,7 @@ const questionsBatch5 = [
             "Gain remote access",
             "Information gathering",
             "Launch attacks",
-            "Vulnerability scanning (Correct Answer)"
+            "Vulnerability scanning "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -615,7 +615,7 @@ const questionsBatch5 = [
         "question": "During a penetration test at Sunshine Media’s streaming platform in Miami, ethical hacker Sofia Alvarez examines whether the company’s web server exposes sensitive resources through poor configuration. She finds that a crawler directive at the server’s root allows unintended indexing of restricted areas. This oversight reveals internal paths that may expose hidden links, confidential files, or other sensitive information. Which technique is Sofia most likely using in this assessment?",
         "options": [
             "Directory Brute Forcing",
-            "Information Gathering from Robots.txt File (Correct Answer)",
+            "Information Gathering from Robots.txt File ",
             "Vulnerability Scanning",
             "Web Server Footprinting/Banner Grabbing"
         ],
@@ -630,7 +630,7 @@ const questionsBatch5 = [
             "JavaScript Keylogger",
             "Hardware Keylogger",
             "Kernel Keylogger",
-            "Application Keylogger (Correct Answer)"
+            "Application Keylogger "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -643,7 +643,7 @@ const questionsBatch5 = [
             "Privilege escalation",
             "Insufficient logging and monitoring",
             "Side-channel attacks",
-            "Loss of governance (Correct Answer)"
+            "Loss of governance"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -654,7 +654,7 @@ const questionsBatch5 = [
         "question": "You are an ethical hacker at HorizonSec Consulting, hired by Liberty Insurance in Philadelphia, Pennsylvania, to test the resilience of their online claim submission portal. During testing, you modify the claim ID parameter in the URL with conditions such as AND 1=1 and AND 1=2. When the first condition is used, the portal displays claim details as normal; when the second condition is used, the page displays no results. You repeat this process to determine how the application responds to true and false conditions without error messages or delays.\n\nBased on the observed behavior, which SQL injection technique are you employing?",
         "options": [
             "Time-based Blind SQL Injection",
-            "Boolean Exploitation (Correct Answer)",
+            "Boolean Exploitation ",
             "Error-based SQL Injection",
             "UNION SQL Injection"
         ],
@@ -667,7 +667,7 @@ const questionsBatch5 = [
         "question": "During a simulated attack against a university’s IT network in California, ethical hacker Sophia deploys custom malicious code onto one lab workstation. Without requiring further user interaction, she observes the malware automatically copying itself into shared folders and spreading through weak admin credentials. Within a short time, dozens of computers across multiple departments are infected with the same payload, even though only one machine was initially targeted. Which type of malware is Sophia most likely demonstrating?",
         "options": [
             "Logic Bomb",
-            "Worm (Correct Answer)",
+            "Worm",
             "Backdoor",
             "Fileless Malware"
         ],
@@ -681,7 +681,7 @@ const questionsBatch5 = [
         "options": [
             "ISO/IEC 27002:2022",
             "ISO/IEC 27701:2019",
-            "ISO/IEC 27005:2022 (Correct Answer)",
+            "ISO/IEC 27005:2022 ",
             "ISO/IEC 27001:2022"
         ],
         "correctAnswer": 2,
@@ -694,7 +694,7 @@ const questionsBatch5 = [
         "options": [
             "FileVault",
             "VeraCrypt",
-            "BitLocker Drive Encryption (Correct Answer)",
+            "BitLocker Drive Encryption ",
             "Rohos Disk Encryption"
         ],
         "correctAnswer": 2,
@@ -707,7 +707,7 @@ const questionsBatch5 = [
         "options": [
             "WatchGuard Wi-Fi Cloud WIPS",
             "RFProtect",
-            "Cisco Adaptive Wireless IPS (Correct Answer)",
+            "Cisco Adaptive Wireless IPS ",
             "Fern WiFi Cracker"
         ],
         "correctAnswer": 2,
@@ -718,7 +718,7 @@ const questionsBatch5 = [
         "id": 456,
         "question": "In Pittsburgh, Pennsylvania, a major steel manufacturer operates a production plant with numerous automated loops that regulate temperature, pressure, and conveyor speed. During an audit, ethical hacker Marcus Reed observes that these loops are coordinated by a centralized supervisory network that links multiple controllers across the facility. Based on this design, which OT system concept is being applied?",
         "options": [
-            "Distributed Control System (DCS) (Correct Answer)",
+            "Distributed Control System (DCS) ",
             "Manual loop",
             "Open loop",
             "Closed loop"
@@ -733,7 +733,7 @@ const questionsBatch5 = [
         "options": [
             "Blowfish",
             "RC4",
-            "AES (Correct Answer)",
+            "AES ",
             "Twofish"
         ],
         "correctAnswer": 2,
@@ -744,7 +744,7 @@ const questionsBatch5 = [
         "id": 458,
         "question": "You are performing a security audit for a regional hospital in Dallas, Texas. While monitoring the network, you discover that an unknown actor has been silently capturing clear-text credentials and analyzing unencrypted traffic flowing across the internal Wi-Fi network. No modifications have been made to the data, and the attack remained undetected until your assessment. Based on this activity, what type of attack is most likely being conducted?",
         "options": [
-            "Passive attack (Correct Answer)",
+            "Passive attack ",
             "Close-in attack",
             "Distribution attack",
             "Insider attack"
@@ -760,7 +760,7 @@ const questionsBatch5 = [
             "TCP SACK Panic",
             "RST Attack",
             "ACK Flood",
-            "SYN Flood Attack (Correct Answer)"
+            "SYN Flood Attack "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -770,7 +770,7 @@ const questionsBatch5 = [
         "id": 460,
         "question": "During a penetration test at a retail company in Seattle, Washington, an ethical hacker needs to disguise her scans so they appear to originate from a specific hardware vendor. The organization uses MAC-based logging, and by assigning a vendor-associated identifier, she can make her traffic blend in with legitimate devices on the network. Which Nmap command should she use to achieve this?",
         "options": [
-            "nmap -sT -Pn --spoof-mac Dell 10.10.1.11 (Correct Answer)",
+            "nmap -sT -Pn --spoof-mac Dell 10.10.1.11",
             "nmap -sT -Pn --spoof-mac 0 10.10.1.11",
             "nmap -sT -Pn --spoof-mac 00:11:22 10.10.1.11",
             "nmap -sT -Pn --spoof-mac 00:01:02:25:56:AE 10.10.1.11"
@@ -786,7 +786,7 @@ const questionsBatch5 = [
             "creating a new service",
             "Startup Folder",
             "Registry run keys",
-            "Scheduled Tasks (Correct Answer)"
+            "Scheduled Tasks "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -799,7 +799,7 @@ const questionsBatch5 = [
             "Use a custom rule set to lock down the network, block unwanted ports at the firewall, and filter specific ports",
             "Configure firewall and IDS rules to detect and block probes",
             "Block unwanted services running on the ports and update the service versions",
-            "Block inbound ICMP message types and all outbound ICMP type-3 unreachable messages (Correct Answer)"
+            "Block inbound ICMP message types and all outbound ICMP type-3 unreachable messages"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -812,7 +812,7 @@ const questionsBatch5 = [
             "Broken Access Control",
             "Security Misconfiguration",
             "Identification and Authentication Failures",
-            "Cryptographic Failures (Correct Answer)"
+            "Cryptographic Failures"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -824,7 +824,7 @@ const questionsBatch5 = [
         "options": [
             "Server-Side Request Forgery (SSRF)",
             "XML External Entity (XXE) Injection",
-            "HTTP Response Splitting (Correct Answer)",
+            "HTTP Response Splitting ",
             "XML Poisoning"
         ],
         "correctAnswer": 2,
@@ -836,7 +836,7 @@ const questionsBatch5 = [
         "question": "During a code review at a defense technology contractor in Virginia, penetration tester Lucas identifies that a newly deployed payroll application encrypts sensitive employee data using a weak custom algorithm. In addition, its session validation logic allows certain requests to bypass access controls altogether. These oversights are traced back to flawed system logic and poor encryption design decisions made during the development phase.\n\nWhich vulnerability category BEST describes the issue Lucas discovered?",
         "options": [
             "Application Flaws",
-            "Design Flaws (Correct Answer)",
+            "Design Flaws ",
             "Poor Patch Management",
             "Misconfigurations/Weak Configurations"
         ],
@@ -850,7 +850,7 @@ const questionsBatch5 = [
         "options": [
             "Cross-Site Request Forgery (CSRF)",
             "Session Hijacking",
-            "Password Spraying (Correct Answer)",
+            "Password Spraying ",
             "Brute Force Attack"
         ],
         "correctAnswer": 2,
@@ -862,7 +862,7 @@ const questionsBatch5 = [
         "question": "During a red team assessment at a university in Chicago, Jake, a penetration tester, scans a group of older Windows workstations in the administration department. On several hosts, he notices traffic on UDP ports 137 and 138 as well as an open TCP port 139. Curious, he uses a utility to query the name table and session services. Within moments, he collects information including machine names, logged-in usernames, and available shared folders without authentication.\n\nWhich enumeration method is being demonstrated in this scenario?",
         "options": [
             "SMB Enumeration",
-            "NetBIOS Enumeration (Correct Answer)",
+            "NetBIOS Enumeration",
             "NFS Enumeration",
             "SNMP Enumeration"
         ],
@@ -874,7 +874,7 @@ const questionsBatch5 = [
         "id": 468,
         "question": "During a penetration test at Pacific Shipping Co. in Seattle, ethical hacker Mia Chen evaluates the defenses protecting the company’s web-facing servers. She observes that the security system is not only checking basic packet headers but also validating session state and performing some application-level analysis. This multilayer approach makes it more difficult for Mia to bypass the firewall using simple fragmentation or tunneling attacks.\n\nWhich type of firewall is Mia most likely facing?",
         "options": [
-            "Stateful Multilayer Inspection Firewall (Correct Answer)",
+            "Stateful Multilayer Inspection Firewall",
             "Packet Filtering Firewall",
             "Circuit-Level Gateway Firewall",
             "Application-Level Firewall"
@@ -889,7 +889,7 @@ const questionsBatch5 = [
         "options": [
             "Dropper",
             "Downloader",
-            "Wrapper (Correct Answer)",
+            "Wrapper",
             "Injector"
         ],
         "correctAnswer": 2,
@@ -901,7 +901,7 @@ const questionsBatch5 = [
         "question": "During a red team assessment at a banking client in Chicago, ethical hacker David gains access to the internal LAN. He sets up a test machine and injects crafted messages into the network. Soon, all traffic between a finance workstation and the authentication server is silently routed through his system without changing switch configurations. He observes usernames and passwords passing through his interface, even though no proxy or VPN is in use.\n\nWhich sniffing technique did David most likely use?",
         "options": [
             "Switch Port Stealing",
-            "ARP Spoofing (Correct Answer)",
+            "ARP Spoofing",
             "STP Attack",
             "IRDP Spoofing"
         ],
@@ -916,7 +916,7 @@ const questionsBatch5 = [
             "Pass-the-Hash",
             "LLMNR/NBT-NS Poisoning",
             "Kerberoasting",
-            "Pass-the-Ticket Attack (Correct Answer)"
+            "Pass-the-Ticket Attack"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -929,7 +929,7 @@ const questionsBatch5 = [
             "Infrastructure as a Service (IaaS)",
             "Anything as a Service (XaaS)",
             "Software as a Service (SaaS)",
-            "Platform as a Service (PaaS) (Correct Answer)"
+            "Platform as a Service (PaaS)"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -941,7 +941,7 @@ const questionsBatch5 = [
         "options": [
             "NTP Enumeration",
             "DNS Enumeration",
-            "LDAP Enumeration (Correct Answer)",
+            "LDAP Enumeration",
             "SMTP Enumeration"
         ],
         "correctAnswer": 2,
@@ -952,7 +952,7 @@ const questionsBatch5 = [
         "id": 474,
         "question": "During a penetration test at an e-commerce company in Boston, ethical hacker Sophia launches an HTTP flood against the checkout page of the site. The simulated traffic consists of repeated GET and POST requests designed to overload application-layer resources. In response, the IT team activates a security tool that inspects and filters malicious HTTP traffic while allowing legitimate customer requests to pass, ensuring service continuity during the exercise. Which DoS/DDoS protection tool is most likely being used in this scenario?",
         "options": [
-            "Web Application Firewall (Correct Answer)",
+            "Web Application Firewall ",
             "Firewall",
             "Intrusion Prevention System",
             "Load Balancer"
@@ -966,7 +966,7 @@ const questionsBatch5 = [
         "question": "During a penetration test at TechTrend Innovations in California, ethical hacker Jake Henderson reviews the company’s web server exposure to network-based threats. He finds that the server is running with multiple open services and protocols that are not required for its operation, such as NetBIOS and SMB. Jake explains to the IT team that attackers could exploit these unnecessary services to gain unauthorized access to the server.\n\nWhich hardening measure should the IT team implement to mitigate this risk?",
         "options": [
             "Use a dedicated machine as a web server",
-            "Block all unnecessary ports, ICMP traffic, and protocols (Correct Answer)",
+            "Block all unnecessary ports, ICMP traffic, and protocols",
             "Eliminate unnecessary files",
             "Conduct risk assessment for patching"
         ],
@@ -978,7 +978,7 @@ const questionsBatch5 = [
         "id": 476,
         "question": "At a smart retail outlet in San Diego, California, ethical hacker Sophia Bennett assesses IoT-based inventory sensors that synchronize with a cloud dashboard. She discovers that sensitive business records are sent across the network without encryption and are also stored in a retrievable format on the provider’s cloud platform. Which IoT attack surface area is most directly demonstrated in this finding?",
         "options": [
-            "Insecure data transfer and storage (Correct Answer)",
+            "Insecure data transfer and storage",
             "Insecure ecosystem interfaces",
             "Insecure network services",
             "Insecure default settings"
@@ -992,7 +992,7 @@ const questionsBatch5 = [
         "question": "During a red team exercise at Orion Tech Systems in San Jose, ethical hacker Nadia creates a campaign of fraudulent messages targeting employees. She uses compromised social media accounts to distribute bulk invitations that contain links to a fake cloud collaboration site. Several employees click the links and are prompted to log in with their corporate credentials, which Nadia captures. Although the lure appears to be a professional networking opportunity, the tactic relies on unsolicited deceptive messages delivered at scale.\n\nWhich social engineering threat is Nadia simulating in this campaign?",
         "options": [
             "Angler Phishing",
-            "Spam and Phishing (Correct Answer)",
+            "Spam and Phishing ",
             "Catfishing",
             "Involuntary Data Leakage"
         ],
@@ -1006,7 +1006,7 @@ const questionsBatch5 = [
         "options": [
             "Traffic IQ Professional",
             "Metasploit",
-            "Colasoft Packet Builder (Correct Answer)",
+            "Colasoft Packet Builder",
             "Nmap"
         ],
         "correctAnswer": 2,
@@ -1019,7 +1019,7 @@ const questionsBatch5 = [
         "options": [
             "Application Server",
             "Virtual Document Tree",
-            "Document Root (Correct Answer)",
+            "Document Root",
             "HTTP Server (Core)"
         ],
         "correctAnswer": 2,
@@ -1031,7 +1031,7 @@ const questionsBatch5 = [
         "question": "At a power distribution facility in Phoenix, Arizona, ethical hacker Sameer Das is performing an OT security assessment. He demonstrates that a programmable controller accepts modifications delivered over the network without checking the origin or cryptographic validity of the package. By uploading altered instructions, he changes how the controller processes commands during operations. Which IoT/OT threat best represents this technique?",
         "options": [
             "Remote access using backdoor",
-            "Firmware update attack (Correct Answer)",
+            "Firmware update attack",
             "Exploit kits",
             "Forged malicious device"
         ],
@@ -1046,7 +1046,7 @@ const questionsBatch5 = [
             "File Injection",
             "Cookie Poisoning",
             "Insecure Deserialization",
-            "Local File Inclusion (Correct Answer)"
+            "Local File Inclusion"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -1058,7 +1058,7 @@ const questionsBatch5 = [
         "options": [
             "Pretexting",
             "Baiting",
-            "Hoax (Correct Answer)",
+            "Hoax",
             "Spam"
         ],
         "correctAnswer": 2,
@@ -1070,7 +1070,7 @@ const questionsBatch5 = [
         "question": "While conducting a red team exercise at a corporate office in San Diego, California, you observe employees working in an open-plan area. By discreetly watching their screens and hand movements as they log into internal systems, you are able to capture several usernames and partial passwords without touching any devices or interacting with the staff. Which social engineering technique does this scenario best illustrate?",
         "options": [
             "Impersonation",
-            "Shoulder Surfing (Correct Answer)",
+            "Shoulder Surfing ",
             "Dumpster Diving",
             "Tailgating"
         ],
@@ -1085,7 +1085,7 @@ const questionsBatch5 = [
             "Gain Remote Access",
             "Information Gathering",
             "Launch Attacks",
-            "Vulnerability Scanning (Correct Answer)"
+            "Vulnerability Scanning "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -1097,7 +1097,7 @@ const questionsBatch5 = [
         "options": [
             "Cavity Virus",
             "Macro Virus",
-            "Stealth Virus (Correct Answer)",
+            "Stealth Virus ",
             "Polymorphic Virus"
         ],
         "correctAnswer": 2,
@@ -1111,7 +1111,7 @@ const questionsBatch5 = [
             "Information Leakage",
             "System and Network Attacks",
             "Corporate Espionage",
-            "Social Engineering (Correct Answer)"
+            "Social Engineering "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -1122,7 +1122,7 @@ const questionsBatch5 = [
         "question": "During a penetration test at a technology startup in Austin, Texas, an ethical hacker is tasked with evaluating defenses against stealthy scanning techniques. She selects an approach that involves sending TCP packets with no flags, relying on the way target systems respond to infer whether ports are open or closed. This allows her to remain less visible to intrusion detection systems compared to a full handshake. Which scanning method is she using?",
         "options": [
             "FIN Scan",
-            "NULL Scan (Correct Answer)",
+            "NULL Scan ",
             "TCP Connect Scan",
             "ACK Scan"
         ],
@@ -1137,7 +1137,7 @@ const questionsBatch5 = [
             "Clone Phishing",
             "Spear Phishing",
             "Consent Phishing",
-            "Whaling (Correct Answer)"
+            "Whaling"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -1148,7 +1148,7 @@ const questionsBatch5 = [
         "question": "During a forensic investigation of an attack on a media company in New York, analysts discovered that a non-privileged process loaded a malicious library instead of the intended library because the attacker placed the rogue file in a directory Windows searched before the legitimate location. When the trusted application started, the attacker’s code executed with the application’s privileges. No registry changes or kernel exploits were involved. Which technique most likely enabled the privilege escalation?",
         "options": [
             "Privilege Escalation by Exploiting Vulnerabilities",
-            "Privilege Escalation Using DLL Hijacking (Correct Answer)",
+            "Privilege Escalation Using DLL Hijacking ",
             "Privilege Escalation by Bypassing User Account Control",
             "Access Token Manipulation"
         ],
@@ -1160,7 +1160,7 @@ const questionsBatch5 = [
         "id": 490,
         "question": "During a compliance review at a law firm in Chicago, an ethical hacker tests the firm’s secure email gateway. She observes that sensitive legal documents are being transmitted in clear text over the Internet, allowing anyone intercepting the traffic to read the contents. The firm is concerned about unauthorized individuals being able to view these communications. Which principle of information security is being violated?",
         "options": [
-            "Confidentiality (Correct Answer)",
+            "Confidentiality",
             "Integrity",
             "Availability",
             "Non-Repudiation"
@@ -1175,7 +1175,7 @@ const questionsBatch5 = [
         "options": [
             "Exploitation",
             "Reconnaissance",
-            "Delivery (Correct Answer)",
+            "Delivery",
             "Weaponization"
         ],
         "correctAnswer": 2,
@@ -1188,7 +1188,7 @@ const questionsBatch5 = [
         "options": [
             "External Scanning",
             "Internal Scanning",
-            "Credentialed Scanning (Correct Answer)",
+            "Credentialed Scanning ",
             "Non-Credentialed Scanning"
         ],
         "correctAnswer": 2,
@@ -1201,7 +1201,7 @@ const questionsBatch5 = [
         "options": [
             "ntptrace [-n] [-m maxhosts] [servername/IP_address]",
             "ntpq [-inp] [-c command] [host] [...]",
-            "ntpdc [-ilnps] [-c command] [host] [...] (Correct Answer)",
+            "ntpdc [-ilnps] [-c command] [host] [...] ",
             "ntpq -p [host]"
         ],
         "correctAnswer": 2,
@@ -1214,7 +1214,7 @@ const questionsBatch5 = [
         "options": [
             "VoIP Enumeration",
             "NetBIOS Enumeration",
-            "NTP Enumeration (Correct Answer)",
+            "NTP Enumeration ",
             "DNS Zone Transfer Enumeration"
         ],
         "correctAnswer": 2,
@@ -1228,7 +1228,7 @@ const questionsBatch5 = [
             "Search & Exfiltration",
             "Initial Intrusion",
             "Persistence",
-            "Expansion (Correct Answer)"
+            "Expansion "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -1239,7 +1239,7 @@ const questionsBatch5 = [
         "question": "You are part of a red team hired to assess the cybersecurity posture of a large retail chain headquartered in New York. The client wants to know whether their defenses can anticipate future attack patterns before they occur. To meet this objective, your team deploys an AI-enabled platform that analyzes previous breaches and anomaly data to forecast potential attack vectors. Which benefit of AI-driven ethical hacking is most critical in this case?",
         "options": [
             "Scalability",
-            "Predictive analysis (Correct Answer)",
+            "Predictive analysis ",
             "Enhanced reporting",
             "Simulation and testing"
         ],
@@ -1252,7 +1252,7 @@ const questionsBatch5 = [
         "question": "During a penetration test for a global e-commerce platform in Dallas, ethical hacker Maria simulates a large-scale DoS campaign. Instead of sending attack traffic directly, she forges requests to multiple open services across the internet. These services unknowingly reply to the victim system, multiplying the amount of traffic hitting the target. Within minutes, the victim’s server is overwhelmed by a flood of responses, even though Maria’s own machine generated only a small amount of traffic. Which attack technique is Maria most likely demonstrating?",
         "options": [
             "Smurf Attack",
-            "Distributed Reflection Denial-of-Service (DRDoS) (Correct Answer)",
+            "Distributed Reflection Denial-of-Service (DRDoS) ",
             "NTP Amplification Attack",
             "Botnet"
         ],
@@ -1266,7 +1266,7 @@ const questionsBatch5 = [
         "options": [
             "Rootkit",
             "Ransomware",
-            "Fileless Malware (Correct Answer)",
+            "Fileless Malware ",
             "Trojan"
         ],
         "correctAnswer": 2,
@@ -1280,7 +1280,7 @@ const questionsBatch5 = [
             "ICMP Flood",
             "Ping of Death",
             "Fragmentation Attack",
-            "Teardrop Attack (Correct Answer)"
+            "Teardrop Attack "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -1292,7 +1292,7 @@ const questionsBatch5 = [
         "options": [
             "Perform a denial-of-service (DoS) attack to crash the web application",
             "Brute-force the admin login page to gain unauthorized access",
-            "Research the vulnerability to check for any available patches or known exploits (Correct Answer)",
+            "Research the vulnerability to check for any available patches or known exploits ",
             "Ignore the vulnerability since it is only flagged as medium-risk"
         ],
         "correctAnswer": 2,
