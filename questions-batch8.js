@@ -4,7 +4,7 @@ const questionsBatch8 = [
         "question": "A cybersecurity firm in Reston, Virginia is contracted to investigate a cluster of endpoint alerts affecting multiple employees of a satellite communications manufacturer. The affected employees all work in orbital systems engineering and regularly access a specialized industry forum used for regulatory updates and technical advisories.\n\nSecurity logs indicate that each compromised workstation visited the same trusted industry website shortly before establishing unusual outbound connections. The site continues to operate normally for general visitors. Further analysis shows that a recently added script conditionally loads additional content only when specific environmental attributes - such as originating organization and browser profile - match predefined conditions. The observed activity stems from routine browsing of a site frequently visited by professionals within that sector.\n\nWhich web application attack category best describes this technique?",
         "options": [
             "Cross-Site Scripting (XSS)",
-            "Watering Hole Attack (Correct Answer)",
+            "Watering Hole Attack",
             "JavaScript Hijacking",
             "Magecart Attack"
         ],
@@ -18,7 +18,7 @@ const questionsBatch8 = [
         "options": [
             "Logic Bomb Virus",
             "Sparse Infector Virus",
-            "Metamorphic Virus (Correct Answer)",
+            "Metamorphic Virus ",
             "Polymorphic Virus"
         ],
         "correctAnswer": 2,
@@ -30,7 +30,7 @@ const questionsBatch8 = [
         "question": "During a red team simulation at Dominion Energy Analytics in Richmond, Virginia, an assessor crafts a malicious document containing embedded code designed to take advantage of a known application weakness. After transmitting the document to a targeted employee, the embedded code executes successfully when the file is opened. Immediately following successful code execution, the compromised workstation begins initiating outbound connections to a remote system controlled by the red team, allowing instructions to be issued and data to be exchanged.\n\nWithin the Cyber Kill Chain methodology, which stage does the establishment of this remote communication channel represent?",
         "options": [
             "Actions on Objectives",
-            "Command and Control (Correct Answer)",
+            "Command and Control",
             "Installation",
             "Exploitation"
         ],
@@ -43,7 +43,7 @@ const questionsBatch8 = [
         "question": "Ethan works as a penetration tester at CyberGuard Solutions, a cybersecurity consulting firm in Raleigh, North Carolina. During an authorized security assessment of a regional insurance company, Ethan was provided with a set of password hashes to evaluate the strength of employee-generated credentials.\n\nTo test resistance against word-based password creation patterns, Ethan supplied a single custom wordlist containing common organizational terms and department names into his cracking tool. The tool automatically generated password candidates by linking multiple entries from that same list in varying combinations before attempting to match them against the hashes.\n\nThis approach proved highly effective against passwords formed by concatenating familiar words.\n\nWhich of the following password-cracking techniques is Ethan using?",
         "options": [
             "PRINCE Attack",
-            "Combinator Attack (Correct Answer)",
+            "Combinator Attack ",
             "Markow-Chain Attack",
             "Fingerprint Attack"
         ],
@@ -58,7 +58,7 @@ const questionsBatch8 = [
             "Spyware",
             "Scareware",
             "Potentially Unwanted Applications (PUAs)",
-            "Botnet Agents (Correct Answer)"
+            "Botnet Agents "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -71,7 +71,7 @@ const questionsBatch8 = [
             "No Certificate Revocation",
             "Unauthenticated HTTPS Connections",
             "No Non-repudiation",
-            "Exposed Bearer Tokens in Logs (Correct Answer)"
+            "Exposed Bearer Tokens in Logs "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -83,7 +83,7 @@ const questionsBatch8 = [
         "options": [
             "Use quantum-specific firewalls to protect quantum communication channels",
             "Break data into fragments and distribute it across multiple locations",
-            "Encrypt stored data with quantum-resistant algorithms (Correct Answer)",
+            "Encrypt stored data with quantum-resistant algorithms ",
             "Include quantum-resistance checks in SDLC and code review processes"
         ],
         "correctAnswer": 2,
@@ -96,7 +96,7 @@ const questionsBatch8 = [
         "options": [
             "Application-Level/User-Mode Rootkit",
             "Kernel-Level Rootkit",
-            "Hypervisor-Level Rootkit (Correct Answer)",
+            "Hypervisor-Level Rootkit ",
             "Boot-Loader-Level Rootkit"
         ],
         "correctAnswer": 2,
@@ -110,7 +110,7 @@ const questionsBatch8 = [
             "Wavelet-Based Signal Analysis",
             "Traffic Pattern Analysis",
             "Activity Profiling",
-            "Sequential Change-Point Detection (Correct Answer)"
+            "Sequential Change-Point Detection "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -121,7 +121,7 @@ const questionsBatch8 = [
         "question": "During an authorized security assessment at a municipal power distribution facility in Omaha, Nebraska, a certified ethical hacker performs passive traffic analysis between the control center and several remote substations.\n\nThe tester observes structured request-response messages used to read coil status and write register values on industrial controllers. All communication occurs over TCP port 502, and the protocol does not provide built-in encryption or authentication.\n\nBased on these characteristics, which OT communication protocol is operating within this environment?",
         "options": [
             "IEC 60870-S-104",
-            "MODBUS (Correct Answer)",
+            "MODBUS ",
             "DNP3",
             "OPC UA"
         ],
@@ -136,7 +136,7 @@ const questionsBatch8 = [
             "Call Spoofing",
             "QTP Hijacking",
             "SMiShing",
-            "SIMjacker (Correct Answer)"
+            "SIMjacker "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -146,7 +146,7 @@ const questionsBatch8 = [
         "id": 712,
         "question": "A multinational manufacturing company in San Jose, California has deployed a perimeter firewall to protect its internal production networks. During a red team exercise, testers observe that the device monitors active TCP communications and allows traffic to continue only when packets correspond to recognized, previously established connections.\n\nThe firewall evaluates multiple header attributes across ongoing communications while operating inline at the network boundary.\n\nFrom a firewall architecture perspective, what type of Firewall is most likely in use at this perimeter?",
         "options": [
-            "Stateful Multilayer Inspection Firewall (Correct Answer)",
+            "Stateful Multilayer Inspection Firewall ",
             "Circuit-Level Gateway Firewall",
             "Application-Level Firewall",
             "Packet Filtering Firewall"
@@ -160,7 +160,7 @@ const questionsBatch8 = [
         "question": "Arjun Mehta, a red team specialist at Sentinel Dynamics, is conducting a controlled reconnaissance assessment against the company's perimeter network. During testing, the security operations team observes that the firewall logs display several different originating systems associated with the same scanning activity, Arjun's objective is to ensure that his actual testing machine cannot be easily distinguished from other recorded entries. What technique is Arjun using in this scenario?",
         "options": [
             "Source Routing",
-            "IP Address Decoy (Correct Answer)",
+            "IP Address Decoy ",
             "Source Port Manipulation",
             "IP Address Spoofing"
         ],
@@ -174,7 +174,7 @@ const questionsBatch8 = [
         "options": [
             "Forged Malicious Device Attack",
             "SDR-Based Attack",
-            "DNS Rebinding Attack (Correct Answer)",
+            "DNS Rebinding Attack ",
             "Distributed Denial-of-Service (DDoS) Attack"
         ],
         "correctAnswer": 2,
@@ -185,7 +185,7 @@ const questionsBatch8 = [
         "id": 715,
         "question": "A mid-sized insurance provider in Hartford, Connecticut authorizes a controlled red team engagement to evaluate its public-facing customer portal. Before progressing to active exploitation, the assessment team concentrates on understanding how the site is organized and how its content is interconnected.\n\nUsing automated tooling, they systematically retrieve publicly accessible pages along with associated resources such as scripts, media files, and referenced directories. The collected material allows the team to analyze navigation paths, hidden references, and structural relationships without repeatedly interacting with the live production system.\n\nThis preparatory effort is intended to build a detailed structural understanding of the application before later testing phases begin.\n\nWithin the web server attack methodology, which stage is most accurately demonstrated in this scenario?",
         "options": [
-            "Website Mirroring (Correct Answer)",
+            "Website Mirroring ",
             "Information Gathering",
             "Web Server Footprinting",
             "Vulnerability Scanning"
@@ -199,7 +199,7 @@ const questionsBatch8 = [
         "question": "A smart building management company in Seattle, Washington deploys wireless door sensors and badge-based access systems throughout its corporate headquarters. During a security assessment, an analyst captures legitimate radio transmissions between employee access badges and the entry control units.\n\nLater that evening, without modifying or decrypting the original communication, the analyst retransmits the previously captured signal toward a secured entrance. The access control system accepts the transmission as valid and unlocks the door, even though the legitimate badge is not present.\n\nDetermine the attack technique demonstrated in this assessment.",
         "options": [
             "BlueBorne Attack",
-            "Replay Attack (Correct Answer)",
+            "Replay Attack ",
             "Rolling Code Attack",
             "Sybil Attack"
         ],
@@ -213,7 +213,7 @@ const questionsBatch8 = [
         "options": [
             "Data hiding in file system structures",
             "Data/file deletion",
-            "Overwriting data/metadata (Correct Answer)",
+            "Overwriting data/metadata ",
             "Artifact wiping"
         ],
         "correctAnswer": 2,
@@ -226,7 +226,7 @@ const questionsBatch8 = [
         "options": [
             "Use restrictive cache directives such as \"Cache-Control: no-cache\"",
             "Implement SSL to encrypt all information in transit via the network",
-            "Regenerate the session ID after a successful login (Correct Answer)",
+            "Regenerate the session ID after a successful login ",
             "Do not create sessions for unauthenticated users"
         ],
         "correctAnswer": 2,
@@ -239,7 +239,7 @@ const questionsBatch8 = [
         "options": [
             "Implementing RFC 3704 filtering at the network edge",
             "Enabling Cisco IPS Source IP reputation filtering",
-            "Leveraging DDoS prevention offerings from an ISP or DDoS mitigation service (Correct Answer)",
+            "Leveraging DDoS prevention offerings from an ISP or DDoS mitigation service ",
             "Deploying Black Hole filtering at the routing layer"
         ],
         "correctAnswer": 2,
@@ -253,7 +253,7 @@ const questionsBatch8 = [
             "Scareware designed to trick users into installing rogue software",
             "Spam Email used for mass unsolicited distribution",
             "Chain Letters that incentivize forwarding messages",
-            "Hoax Letters that spread false security warnings (Correct Answer)"
+            "Hoax Letters that spread false security warnings "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -266,7 +266,7 @@ const questionsBatch8 = [
             "ldapsearch -x -h -b \"DC=htb,DC=local\" \"objectclass=*\"",
             "ldapsearch -h -x",
             "ldapsearch -h -x -b \"DC=htb,DC=local\"",
-            "ldapsearch -h -x -s base namingcontexts (Correct Answer)"
+            "ldapsearch -h -x -s base namingcontexts "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -278,7 +278,7 @@ const questionsBatch8 = [
         "options": [
             "To establish persistent access within the target network",
             "To bypass authentication controls protecting internal applications",
-            "To conceal the origin of reconnaissance activity and reduce attribution risk (Correct Answer)",
+            "To conceal the origin of reconnaissance activity and reduce attribution risk",
             "To spoof packet source addresses at the IP layer"
         ],
         "correctAnswer": 2,
@@ -292,7 +292,7 @@ const questionsBatch8 = [
             "airodump-ng",
             "airmon-ng",
             "aircrack-ng",
-            "aireplay-ng (Correct Answer)"
+            "aireplay-ng "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -303,7 +303,7 @@ const questionsBatch8 = [
         "question": "A national logistics company in Atlanta, Georgia maintains a segmented research VLAN inside its primary data center to study emerging supply-chain targeting tactics. The environment includes enterprise-grade server platforms hosting web applications, database services populated with curated operational data, and identity services configured to resemble production access structures.\n\nDuring a red team engagement, external adversaries who gained initial access were observed interacting with systems inside this VLAN for several days. They escalated privileges, accessed structured data repositories, moved between internal hosts, and attempted to reach additional internal segments. All activity occurred within the controlled environment and was instrumented to capture attacker techniques in depth.\n\nWhich honeypot deployment model most accurately describes this research environment?",
         "options": [
             "Low-interaction Honeypot",
-            "High-interaction Honeypot (Correct Answer)",
+            "High-interaction Honeypot ",
             "Pure Honeypot",
             "Medium-interaction Honeypot"
         ],
@@ -315,7 +315,7 @@ const questionsBatch8 = [
         "id": 725,
         "question": "A university authorizes a wireless protocol resilience assessment on its WPA2-secured network. An ethical hacker positions a testing device within range of an access point and observes the key negotiation exchange between the client and the access point.\n\nBy selectively retransmitting a previously captured handshake message at a precise moment in the exchange, the tester causes the client device to reinstall an already negotiated encryption key. Subsequent traffic patterns reveal that certain protections expected from unique session parameters are no longer consistently enforced.\n\nWhat kind of wireless attack technique is being illustrated in this scenario.",
         "options": [
-            "Key Reinstallation Attack (KRACK) (Correct Answer)",
+            "Key Reinstallation Attack (KRACK) ",
             "Replay Attack",
             "Man-in-the-Middle Attack",
             "WPA2 PSK Offline Cracking"
@@ -329,7 +329,7 @@ const questionsBatch8 = [
         "question": "A financial institution in Chicago deploys an internal HTTPS-based customer portal that uses response compression to optimize bandwidth. During an authorized security assessment, a tester gains a vantage point along the communication path between internal clients and the gateway device.\n\nBy repeatedly initiating controlled requests and analyzing subtle differences in encrypted response sizes, the tester correlates variations in compressed output with specific input patterns. Over time, this analysis enables extraction of portions of a protected authentication value transmitted within the secure channel.\n\nWhich session hijacking technique best describes this activity?",
         "options": [
             "Forbidden attack",
-            "CRIME attack (Correct Answer)",
+            "CRIME attack ",
             "Man-in-the-Browser (MITB) attack",
             "Man-in-the-Middle (MITM) attack"
         ],
@@ -342,7 +342,7 @@ const questionsBatch8 = [
         "question": "A threat intelligence review at a manufacturing firm in Pittsburgh, Pennsylvania, revealed repeated external queries targeting the organization's public name servers. Although no intrusion occurred, analysts observed that the queries appeared designed to systematically map internal naming conventions and infrastructure patterns.\n\nThe security team determined that the issue was not excessive traffic volume but rather the exposure of internal namespace details through responses handled by the same server used for both internal and external resolution. To reduce the risk of disclosing sensitive structural information to outside systems, the team redesigned their DNS deployment.\n\nWhich countermeasure best addresses the risk described in this scenario?",
         "options": [
             "Randomizing DNS source ports and query identifiers",
-            "Implementing a split DNS architecture (Correct Answer)",
+            "Implementing a split DNS architecture ",
             "Implementing rate limiting on DNS servers",
             "Enabling DNS logging and anomaly detection"
         ],
@@ -357,7 +357,7 @@ const questionsBatch8 = [
             "Traffic Pattern Analysis",
             "Sequential Change-Point Detection",
             "Activity Profiling",
-            "Wavelet-Based Signal Analysis (Correct Answer)"
+            "Wavelet-Based Signal Analysis "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -369,7 +369,7 @@ const questionsBatch8 = [
         "options": [
             "Eclipse Attack",
             "Finney Attack",
-            "51% Attack (Correct Answer)",
+            "51% Attack ",
             "DeFi Sandwich Attack"
         ],
         "correctAnswer": 2,
@@ -381,7 +381,7 @@ const questionsBatch8 = [
         "question": "A municipal data center in Phoenix, Arizona, deploys a network intrusion detection system to monitor traffic entering its public records portal. During a scheduled red team exercise, authorized testers successfully exploit a vulnerable web service and gain restricted administrative access.\n\nPost-exercise review reveals that the IDS generated a high-severity alert precisely at the time the exploit traffic reached the server. Log correlation confirms that the alert corresponded directly to the malicious activity performed during the test window.\n\nHow should this IDS outcome be classified?",
         "options": [
             "False Negative",
-            "True Positive (Correct Answer)",
+            "True Positive ",
             "False Positive",
             "True Negative"
         ],
@@ -396,7 +396,7 @@ const questionsBatch8 = [
             "SOAP Injection",
             "Application Logic Attacks",
             "XML Injection",
-            "WSDL Probing Attacks (Correct Answer)"
+            "WSDL Probing Attacks "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -407,7 +407,7 @@ const questionsBatch8 = [
         "question": "A regional insurance claims platform in Sacramento, California is protected by a web application firewall that evaluates inbound requests for suspicious query structures. During an authorized assessment, a tester observes that conventional injection attempts are consistently rejected.\n\nThe tester then adjusts the format and composition of the request while preserving its intended database behavior. After this modification, the request passes through the filtering mechanism and is processed by the backend system without disruption.\n\nWhich firewall evasion technique is being demonstrated?",
         "options": [
             "Splitting payload components using HTTP Parameter Fragmentation (HPF)",
-            "Transforming query structure to evade pattern-based inspection (Correct Answer)",
+            "Transforming query structure to evade pattern-based inspection ",
             "Combining multiple evasion methods through an integration approach",
             "Using HTTP Parameter Pollution (HPP) to override query parameters"
         ],
@@ -419,7 +419,7 @@ const questionsBatch8 = [
         "id": 733,
         "question": "Granite Ridge Technologies in New Jersey is preparing to formalize its information security governance model. Executive leadership requires adoption of an internationally recognized framework that ensures confidentiality, integrity, and availability of information while enabling the organization to systematically identify, assess, and manage information security risks. The framework must also support compliance with regulatory and contractual obligations and demonstrate commitment to stakeholders.\n\nWhich standard best fulfills these requirements?",
         "options": [
-            "ISO/IEC 27001:2022 (Correct Answer)",
+            "ISO/IEC 27001:2022 ",
             "ISO/IEC 27005:2022",
             "ISO/IEC 27701:2019",
             "ISO/IEC 27002:2022"
@@ -433,7 +433,7 @@ const questionsBatch8 = [
         "question": "A municipal services portal in Lexington, Kentucky includes a search parameter that retrieves citizen service requests. During an authorized security review, an analyst alters the parameter value by introducing single quotation marks, logical expressions such as AND 1=1, and variations like AND 1=2, observing how the application responds to each modification.\n\nBy comparing differences in the application's output and behavior after each structured input change, the analyst evaluates whether the parameter affects the underlying query processing.\n\nWhich SQL injection detection method is being applied?",
         "options": [
             "Static Testing",
-            "Dynamic Testing (Correct Answer)",
+            "Dynamic Testing ",
             "Function Testing",
             "Fuzz Testing"
         ],
@@ -447,7 +447,7 @@ const questionsBatch8 = [
         "options": [
             "PCB-1016 Jammer",
             "CPB-2612H-SG Jammer",
-            "CPB-2920 Jammer (Correct Answer)",
+            "CPB-2920 Jammer ",
             "PCB-4510 Jammer"
         ],
         "correctAnswer": 2,
@@ -460,7 +460,7 @@ const questionsBatch8 = [
         "options": [
             "Hardware Keylogger",
             "Acoustic/CAM Keylogger",
-            "Wi-Fi Keylogger (Correct Answer)",
+            "Wi-Fi Keylogger ",
             "Bluetooth Keylogger"
         ],
         "correctAnswer": 2,
@@ -474,7 +474,7 @@ const questionsBatch8 = [
             "FIN Scan",
             "UDP Scan",
             "TCP Connect Scan",
-            "XMAS Scan (Correct Answer)"
+            "XMAS Scan "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -486,7 +486,7 @@ const questionsBatch8 = [
         "options": [
             "Switch Port Stealing",
             "ARP Poisoning",
-            "MAC Flooding (Correct Answer)",
+            "MAC Flooding ",
             "DNS Poisoning"
         ],
         "correctAnswer": 2,
@@ -500,7 +500,7 @@ const questionsBatch8 = [
             "UDP Ping Scan",
             "ICMP ECHO Ping Sweep",
             "IP Protocol Scan",
-            "ICMP Timestamp Ping Scan (Correct Answer)"
+            "ICMP Timestamp Ping Scan "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -513,7 +513,7 @@ const questionsBatch8 = [
             "Use encryption mechanism to store data",
             "Set a strong passcode on the device and change it relatively often",
             "Maintain a clear separation between business and personal data",
-            "Set passwords for apps to restrict others from accessing them (Correct Answer)"
+            "Set passwords for apps to restrict others from accessing them"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
