@@ -4,7 +4,7 @@ const questionsBatch7 = [
         "question": "Which technique is MOST effective to bypass signature-based IDS?",
         "options": [
             "Obfuscation",
-            "Polymorphism (Correct Answer)",
+            "Polymorphism ",
             "Encryption",
             "Port scanning"
         ],
@@ -16,7 +16,7 @@ const questionsBatch7 = [
         "id": 602,
         "question": "An attacker exploits a misconfigured S3 bucket containing application backups with database credentials.\n\nWhat cloud security failure category does this fall under?",
         "options": [
-            "Misconfiguration (Correct Answer)",
+            "Misconfiguration ",
             "Insider threat",
             "Zero-day vulnerability",
             "Malware infection"
@@ -31,7 +31,7 @@ const questionsBatch7 = [
         "options": [
             "DNS tunneling",
             "DNS poisoning",
-            "Fast flux (Correct Answer)",
+            "Fast flux",
             "Zone transfer"
         ],
         "correctAnswer": 2,
@@ -43,7 +43,7 @@ const questionsBatch7 = [
         "question": "A penetration tester extracts NTLM hashes but does not crack them, instead reuses them to authenticate.\n\nWhat attack is this?",
         "options": [
             "Kerberoasting",
-            "Pass-the-hash (Correct Answer)",
+            "Pass-the-hash ",
             "Brute force",
             "Replay attack"
         ],
@@ -58,7 +58,7 @@ const questionsBatch7 = [
             "Spoofing",
             "Phishing",
             "Spear phishing",
-            "Business Email Compromise (Correct Answer)"
+            "Business Email Compromise "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -71,7 +71,7 @@ const questionsBatch7 = [
             "SQL Injection",
             "CSRF",
             "XSS",
-            "Token replay (Correct Answer)"
+            "Token replay"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -81,7 +81,7 @@ const questionsBatch7 = [
         "id": 607,
         "question": "An organization lacks centralized logs. Which attack phase is hardest to detect?",
         "options": [
-            "Lateral movement (Correct Answer)",
+            "Lateral movement ",
             "Recon",
             "Delivery",
             "Initial access"
@@ -94,7 +94,7 @@ const questionsBatch7 = [
         "id": 608,
         "question": "Which metric best measures detection speed?",
         "options": [
-            "MTTD (Correct Answer)",
+            "MTTD ",
             "SLA",
             "CVSS",
             "MTTR"
@@ -107,7 +107,7 @@ const questionsBatch7 = [
         "id": 609,
         "question": "A web app fails to restrict API request frequency.\n\nWhat risk exists?",
         "options": [
-            "Data scraping (Correct Answer)",
+            "Data scraping ",
             "CSRF",
             "XSS",
             "SQLi"
@@ -122,7 +122,7 @@ const questionsBatch7 = [
         "options": [
             "DoS",
             "XSS",
-            "Insecure Deserialization (Correct Answer)",
+            "Insecure Deserialization ",
             "SQLi"
         ],
         "correctAnswer": 2,
@@ -136,7 +136,7 @@ const questionsBatch7 = [
             "Mass assignment",
             "XSS",
             "SQLi",
-            "BOLA (Correct Answer)"
+            "BOLA "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -148,7 +148,7 @@ const questionsBatch7 = [
         "options": [
             "Session fixation",
             "XSS",
-            "Predictable tokens (Correct Answer)",
+            "Predictable tokens ",
             "CSRF"
         ],
         "correctAnswer": 2,
@@ -161,7 +161,7 @@ const questionsBatch7 = [
         "options": [
             "CSRF",
             "DoS",
-            "Supply chain risk (Correct Answer)",
+            "Supply chain risk ",
             "XSS"
         ],
         "correctAnswer": 2,
@@ -173,7 +173,7 @@ const questionsBatch7 = [
         "question": "A web app does not limit API request rate in code.\n\nWhat attack is enabled?",
         "options": [
             "XSS",
-            "Data scraping (Correct Answer)",
+            "Data scraping ",
             "SQLi",
             "CSRF"
         ],
@@ -186,7 +186,7 @@ const questionsBatch7 = [
         "question": "A Java app allows file download via user-controlled path.\n\nWhat attack is possible?",
         "options": [
             "SQLi",
-            "Path traversal (Correct Answer)",
+            "Path traversal ",
             "XSS",
             "CSRF"
         ],
@@ -201,7 +201,7 @@ const questionsBatch7 = [
             "Brute force",
             "Replay",
             "Kerberoasting",
-            "Pass-the-hash (Correct Answer)"
+            "Pass-the-hash "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -214,7 +214,7 @@ const questionsBatch7 = [
             "DoS",
             "SQLi",
             "XSS",
-            "Persistence (Correct Answer)"
+            "Persistence "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -224,7 +224,7 @@ const questionsBatch7 = [
         "id": 618,
         "question": "A compromised admin account is used to disable logging services.\n\nWhat is the attacker attempting?",
         "options": [
-            "Anti-forensics (Correct Answer)",
+            "Anti-forensics",
             "Exfiltration",
             "Recon",
             "Privilege escalation"
@@ -239,7 +239,7 @@ const questionsBatch7 = [
         "options": [
             "SQLi",
             "XSS",
-            "Credential dumping (Correct Answer)",
+            "Credential dumping ",
             "DoS"
         ],
         "correctAnswer": 2,
@@ -253,7 +253,7 @@ const questionsBatch7 = [
             "Delivery",
             "Persistence",
             "Recon",
-            "Defense evasion (Correct Answer)"
+            "Defense evasion "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -266,7 +266,7 @@ const questionsBatch7 = [
             "Introduce more controls to bring risk to 0%",
             "Avoid the risk",
             "Mitigate the risk",
-            "Accept the risk (Correct Answer)"
+            "Accept the risk "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -277,7 +277,7 @@ const questionsBatch7 = [
         "question": "Which of the following is the primary objective of a rootkit?",
         "options": [
             "It provides an undocumented opening in a program",
-            "It replaces legitimate programs (Correct Answer)",
+            "It replaces legitimate programs ",
             "It creates a buffer overflow",
             "It opens a port to provide an unauthorized service"
         ],
@@ -289,7 +289,7 @@ const questionsBatch7 = [
         "id": 623,
         "question": "A new wireless client is configured to join a 802.11 network. This client uses the same hardware and software as many of the other clients on the network. The client can see the network, but cannot connect. A wireless packet sniffer shows that the Wireless Access Point (WAP) is not responding to the association requests being sent by the wireless client.\n\nWhat is a possible source of this problem?",
         "options": [
-            "The WAP does not recognize the client’s MAC address (Correct Answer)",
+            "The WAP does not recognize the client’s MAC address ",
             "The client cannot see the SSID of the wireless network",
             "The wireless client is not configured to use DHCP",
             "Client is configured for the wrong channel"
@@ -305,7 +305,7 @@ const questionsBatch7 = [
             "Software only, they are the most effective.",
             "Hardware and Software Keyloggers.",
             "Passwords are always best obtained using Hardware key loggers.",
-            "Hardware, Software, and Sniffing. (Correct Answer)"
+            "Hardware, Software, and Sniffing. "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -318,7 +318,7 @@ const questionsBatch7 = [
             "139 and 443",
             "137 and 139",
             "137 and 443",
-            "139 and 445 (Correct Answer)"
+            "139 and 445"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -330,7 +330,7 @@ const questionsBatch7 = [
         "options": [
             "5",
             "2",
-            "3 (Correct Answer)",
+            "3 ",
             "4"
         ],
         "correctAnswer": 2,
@@ -342,7 +342,7 @@ const questionsBatch7 = [
         "question": "User A is writing a sensitive email message to user B outside the local network. User A has chosen to use PKI to secure his message and ensure only user B can read the sensitive email.\n\nAt what layer of the OSI layer does the encryption and decryption of the message take place?",
         "options": [
             "Transport",
-            "Presentation (Correct Answer)",
+            "Presentation",
             "Application",
             "Session"
         ],
@@ -354,7 +354,7 @@ const questionsBatch7 = [
         "id": 628,
         "question": "Which address translation scheme would allow a single public IP address to always correspond to a single machine on an internal network, allowing “server publishing”?",
         "options": [
-            "Static Network Address Translation (Correct Answer)",
+            "Static Network Address Translation",
             "Overloading Port Address Translation",
             "Dynamic Network",
             "Dynamic Port Address Translation"
@@ -370,7 +370,7 @@ const questionsBatch7 = [
             "DNS Scheme",
             "DNSSEC",
             "DynDNS",
-            "Split DNS (Correct Answer)"
+            "Split DNS "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -380,7 +380,7 @@ const questionsBatch7 = [
         "id": 630,
         "question": "The configuration allows a wired or wireless network interface controller to pass all traffic it receives to the Central Processing Unit (CPU), rather than passing only the frames that the controller is intended to receive.\n\nWhich of the following is being described?",
         "options": [
-            "Promiscuous mode (Correct Answer)",
+            "Promiscuous mode ",
             "Port forwarding",
             "WEM",
             "Multi-cast mode"
@@ -393,7 +393,7 @@ const questionsBatch7 = [
         "id": 631,
         "question": "What is a “Collision attack” in cryptography?",
         "options": [
-            "Collision attacks try to find two inputs producing the same hash (Correct Answer)",
+            "Collision attacks try to find two inputs producing the same hash ",
             "Collision attacks try to get the public key",
             "Collision attacks try to break the hash into three parts to get the plaintext value",
             "Collision attacks try to break the hash into two parts, with the same bytes in each part to get the private key"
@@ -407,7 +407,7 @@ const questionsBatch7 = [
         "question": "A web application allows users to upload files and later include them in pages dynamically. Attackers exploit this to execute code.\n\nWhich vulnerability exists?",
         "options": [
             "LFI",
-            "RFI (Correct Answer)",
+            "RFI ",
             "CSRF",
             "XSS"
         ],
@@ -422,7 +422,7 @@ const questionsBatch7 = [
             "This is a scam because Bob does not know Scott.",
             "This is probably a legitimate message as it comes from a respectable organization.",
             "Bob should write to [email protected] to verify the identity of Scott.",
-            "This is a scam as everybody can get a @yahoo address, not the Yahoo customer service employees. (Correct Answer)"
+            "This is a scam as everybody can get a @yahoo address, not the Yahoo customer service employees. "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -434,7 +434,7 @@ const questionsBatch7 = [
         "options": [
             "nmap",
             "ping",
-            "tcpdump (Correct Answer)",
+            "tcpdump ",
             "tracert"
         ],
         "correctAnswer": 2,
@@ -445,7 +445,7 @@ const questionsBatch7 = [
         "id": 635,
         "question": "Which of the following is a component of a risk assessment?",
         "options": [
-            "Administrative safeguards (Correct Answer)",
+            "Administrative safeguards ",
             "Logical interface",
             "Physical security",
             "DMZ"
@@ -460,7 +460,7 @@ const questionsBatch7 = [
         "options": [
             "Receptionist",
             "Mantrap",
-            "Bollards (Correct Answer)",
+            "Bollards ",
             "Turnstile"
         ],
         "correctAnswer": 2,
@@ -473,7 +473,7 @@ const questionsBatch7 = [
         "options": [
             "GUI Installed Network Application CLASS",
             "Gateway Interface Network Application",
-            "Graphical Identification and Authentication DLL (Correct Answer)",
+            "Graphical Identification and Authentication DLL ",
             "Global Internet National Authority (G-USA)"
         ],
         "correctAnswer": 2,
@@ -485,7 +485,7 @@ const questionsBatch7 = [
         "question": "The tools which receive event logs from servers, network equipment, and applications, and perform analysis and correlation on those logs, and can generate alarms for security relevant issues, are known as what?",
         "options": [
             "Intrusion prevention Server",
-            "Security incident and event Monitoring (Correct Answer)",
+            "Security incident and event Monitoring ",
             "network Sniffer",
             "Vulnerability Scanner"
         ],
@@ -498,7 +498,7 @@ const questionsBatch7 = [
         "question": "Scenario: 1.Victim opens the attacker’s web site. 2.Attacker sets up a web site which contains interesting and attractive content like ‘Do you want to make S1000 in a day?’. 3.Victim clicks to the interesting and attractive content URL. 4.Attacker creates a transparent ‘iframe’ in front of the URL which victim attempts to click, so victim thinks that he/she clicks to the ‘Do you want to make $1000 in a day?’ URL but actually he/she clicks to the content or URL that exists in the transparent ‘iframe’ which is setup by the attacker.\n\nWhat is the name of the attack which is mentioned in the scenario?",
         "options": [
             "HTTP Parameter Pollution",
-            "Clickjacking Attack (Correct Answer)",
+            "Clickjacking Attack ",
             "HTML Injection",
             "Session Fixation"
         ],
@@ -513,7 +513,7 @@ const questionsBatch7 = [
             "Heuristics based",
             "Honeypot based",
             "Behavioral based",
-            "Cloud based (Correct Answer)"
+            "Cloud based"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -525,7 +525,7 @@ const questionsBatch7 = [
         "options": [
             "No response",
             "FIN",
-            "RST (Correct Answer)",
+            "RST ",
             "SYN E)\tACK F)\tPSH"
         ],
         "correctAnswer": 2,
@@ -539,7 +539,7 @@ const questionsBatch7 = [
             "nmap -T4 -q 10.10.0.0/24",
             "nmap -T4 -O 10.10.0.0/24",
             "nmap -T4 -r 10.10.1.0/24",
-            "nmap -T4 -F 10.10.0.0/24 (Correct Answer)"
+            "nmap -T4 -F 10.10.0.0/24 "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -551,7 +551,7 @@ const questionsBatch7 = [
         "options": [
             "Wireshark",
             "Aircrack-ng",
-            "Ettercap (Correct Answer)",
+            "Ettercap ",
             "Tcpdump"
         ],
         "correctAnswer": 2,
@@ -562,7 +562,7 @@ const questionsBatch7 = [
         "id": 644,
         "question": "Which of the following algorithms can be used to guarantee the integrity of messages being sent, in transit, or stored?",
         "options": [
-            "hashing algorithms (Correct Answer)",
+            "hashing algorithms ",
             "integrity algorithms",
             "symmetric algorithms",
             "asymmetric algorithms"
@@ -578,7 +578,7 @@ const questionsBatch7 = [
             "The document can be sent to the accountant using an exclusive USB for that document",
             "The CFO can use an excel file with a password",
             "The financial statements can be sent twice, one by email and the other delivered in USB and the accountant can compare both to be sure is the same document",
-            "The CFO can use a hash algorithm in the document once he approved the financial statements (Correct Answer)"
+            "The CFO can use a hash algorithm in the document once he approved the financial statements "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -588,7 +588,7 @@ const questionsBatch7 = [
         "id": 646,
         "question": "A company’s security policy states that all Web browsers must automatically delete their HTTP browser cookies upon terminating.\n\nWhat sort of security breach is this policy attempting to mitigate?",
         "options": [
-            "Attempts by attackers to access Web sites that trust the Web browser user by stealing the user’s authentication credentials. (Correct Answer)",
+            "Attempts by attackers to access Web sites that trust the Web browser user by stealing the user’s authentication credentials. ",
             "Attempts by attackers to determine the user’s Web browser usage patterns, including when sites were visited and for how long.",
             "Attempts by attackers to access the user and password information stored in the company’s SQL database.",
             "Attempts by attackers to access password stored on the user's computer without the user’s knowledge."
@@ -603,7 +603,7 @@ const questionsBatch7 = [
         "options": [
             "There is no need for specific security measures on the network elements as long as firewalls and IPS systems exist.",
             "The operator knows that attacks and down time are inevitable and should have a backup site.",
-            "Network elements must be hardened with user ids and strong passwords. Regular security tests and audits should be performed. (Correct Answer)",
+            "Network elements must be hardened with user ids and strong passwords. Regular security tests and audits should be performed.",
             "As long as the physical access to the network elements is restricted, there is no need for additional measures."
         ],
         "correctAnswer": 2,
@@ -615,7 +615,7 @@ const questionsBatch7 = [
         "question": "By using a smart card and pin, you are using a two-factor authentication that satisfies",
         "options": [
             "Something you know and something you are",
-            "Something you have and something you know (Correct Answer)",
+            "Something you have and something you know ",
             "Something you have and something you are",
             "Something you are and something you remember"
         ],
@@ -629,7 +629,7 @@ const questionsBatch7 = [
         "options": [
             "Resource transfer",
             "Resource records",
-            "DNSSEC (Correct Answer)",
+            "DNSSEC ",
             "Zone transfer"
         ],
         "correctAnswer": 2,
@@ -643,7 +643,7 @@ const questionsBatch7 = [
             "Stealth virus",
             "Polymorphic virus",
             "Macro virus",
-            "Multipartite Virus (Correct Answer)"
+            "Multipartite Virus"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -653,7 +653,7 @@ const questionsBatch7 = [
         "id": 651,
         "question": "Why would you consider sending an email to an address that you know does not exist within the company you are performing a Penetration Test for?",
         "options": [
-            "To illicit a response back that will reveal information about email servers and how they treat undeliverable mail (Correct Answer)",
+            "To illicit a response back that will reveal information about email servers and how they treat undeliverable mail",
             "To create needless SPAM",
             "To determine who is the holder of the root account",
             "To test for virus protection"
@@ -669,7 +669,7 @@ const questionsBatch7 = [
             "FTPS",
             "SFTP",
             "SSL",
-            "IPsec (Correct Answer)"
+            "IPsec "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -682,7 +682,7 @@ const questionsBatch7 = [
             "Dictionary attack",
             "Rainbow tables",
             "Shoulder surfing",
-            "Brute force (Correct Answer)"
+            "Brute force "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -695,7 +695,7 @@ const questionsBatch7 = [
             "John the Ripper",
             "Dsniff",
             "Snort",
-            "Nikto (Correct Answer)"
+            "Nikto "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -708,7 +708,7 @@ const questionsBatch7 = [
             "RST",
             "ACK",
             "SYN-ACK",
-            "SYN (Correct Answer)"
+            "SYN "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -718,7 +718,7 @@ const questionsBatch7 = [
         "id": 656,
         "question": "Your ethical hacking firm has been hired to conduct a penetration test.\n\nWhich of the following documents limits what you can discuss publicly?",
         "options": [
-            "Nondisclosure agreement (Correct Answer)",
+            "Nondisclosure agreement",
             "Memorandum of understanding",
             "PCI-DSS",
             "Terms of engagement"
@@ -731,7 +731,7 @@ const questionsBatch7 = [
         "id": 657,
         "question": "During an authorized cloud security assessment for an e-commerce company based in Seattle, Washington, a certified ethical hacker gains temporary programmatic access to the organization's cloud account.\n\nThe tester focuses on identifying permission boundaries by querying the account to determine which identity entities are associated with attached policies and what level of access those identities possess across cloud resources. The objective is to understand privilege relationships before attempting any further controlled actions.\n\nWhich cloud reconnaissance activity best aligns with this effort?",
         "options": [
-            "Enumerating IAM Roles (Correct Answer)",
+            "Enumerating IAM Roles ",
             "Enumerating S3 Buckets",
             "Enumerating EC2 Instances",
             "Enumerating Serverless Resources"
@@ -746,7 +746,7 @@ const questionsBatch7 = [
         "options": [
             "FlowCrypt",
             "RMail",
-            "S/MIME (Correct Answer)",
+            "S/MIME ",
             "QpenPGP"
         ],
         "correctAnswer": 2,
@@ -758,7 +758,7 @@ const questionsBatch7 = [
         "question": "An authorized security assessment is performed on a public-sector services portal in Madison, Wisconsin. After authenticating with a controlled test account, the assessor captures the authentication identifier issued by the application.\n\nUnder controlled lab conditions, she attempts to reuse the captured identifier from a separate machine connected through a different encrypted channel. Although the identifier remains valid and within its lifetime, the application rejects the request when presented from the alternate environment.\n\nAnalysis indicates that the server evaluates characteristics associated with the original secure exchange before allowing continued use of the issued identifier.\n\nWhich defensive mechanism most likely explains this behavior?",
         "options": [
             "Encrypting DNS resolution traffic using DNS over HTTPS",
-            "Cryptographically binding authentication tokens to the TLS connection context (Correct Answer)",
+            "Cryptographically binding authentication tokens to the TLS connection context",
             "Applying IPsec protection at the network layer",
             "Enforcing HTTP Strict Transport Security"
         ],
@@ -770,7 +770,7 @@ const questionsBatch7 = [
         "id": 660,
         "question": "During an external assessment, a security analyst configures Nmap so that the hardware address recorded in firewall logs differs from the original interface address of the scanning system. Repeated executions of the scan show that the recorded hardware address changes automatically each time. What Nmap option enables this behavior?",
         "options": [
-            "--spoof-mac 0 (Correct Answer)",
+            "--spoof-mac 0 ",
             "--spoof-mac Dell",
             "--spoof-mac 00:01:02:25:56:AE",
             "--spoof-mac Dell 10.10.1.11"
@@ -786,7 +786,7 @@ const questionsBatch7 = [
             "SoftPerfect Network Scanner",
             "Wireshark",
             "Nmap",
-            "SnmpWalk (Correct Answer)"
+            "SnmpWalk "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -798,7 +798,7 @@ const questionsBatch7 = [
         "options": [
             "Persistence",
             "Expansion",
-            "Preparation (Correct Answer)",
+            "Preparation ",
             "Initial Intrusion"
         ],
         "correctAnswer": 2,
@@ -812,7 +812,7 @@ const questionsBatch7 = [
             "NTP amplification attack",
             "Ping of Death attack",
             "ICMP flood attack",
-            "UDP flood attack (Correct Answer)"
+            "UDP flood attack "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -824,7 +824,7 @@ const questionsBatch7 = [
         "options": [
             "Rootkit",
             "Trojan",
-            "Fileless Malware (Correct Answer)",
+            "Fileless Malware ",
             "Worm"
         ],
         "correctAnswer": 2,
@@ -835,7 +835,7 @@ const questionsBatch7 = [
         "id": 665,
         "question": "An enterprise organization in Chicago deploys a WPA2-Enterprise wireless network integrated with a centralized authentication server to validate user credentials through 802.1X. A security consultant is tasked with assessing the resilience of the authentication workflow.\n\nWhile monitoring wireless traffic near the facility, the consultant captures a successful authentication exchange between a legitimate employee device and the authentication infrastructure. Instead of attempting to derive credentials or modify packet contents, the consultant retransmits portions of the previously observed authentication messages to the network under controlled conditions.\n\nThe access point processes the retransmitted authentication sequence in a manner that suggests acceptance of reused authentication data rather than rejecting it as stale or duplicated.\n\nIdentify the wireless attack technique demonstrated in this assessment.",
         "options": [
-            "RADIUS Replay Attack (Correct Answer)",
+            "RADIUS Replay Attack ",
             "Bit-Flipping Attack",
             "Data Frame Injection",
             "Initialization Vector Replay Attack"
@@ -848,7 +848,7 @@ const questionsBatch7 = [
         "id": 666,
         "question": "A healthcare technology company deploys internet-connected cardiac monitoring devices across several hospitals in Minneapolis, Minnesota. During a controlled security review, an analyst discovers that administrative configuration features can be accessed remotely through components that interact with external management platforms.\n\nFurther analysis reveals that these externally reachable components process user-supplied data without sufficient validation checks. Additionally, authentication controls protecting remote configuration features rely solely on basic credential verification without additional safeguards against automated misuse.\n\nAccording to the OWASP Top 10 IoT Vulnerabilities, how should this weakness be classified?",
         "options": [
-            "Insecure Ecosystem Interfaces (Correct Answer)",
+            "Insecure Ecosystem Interfaces ",
             "Insecure Default Settings",
             "Insecure Network Services",
             "Lack of Device Management"
@@ -863,7 +863,7 @@ const questionsBatch7 = [
         "options": [
             "TCP Timestamp Analysis",
             "TCP Window Size",
-            "Initial Sequence Number (ISN) (Correct Answer)",
+            "Initial Sequence Number (ISN) ",
             "Time to Live (TTL)"
         ],
         "correctAnswer": 2,
@@ -875,7 +875,7 @@ const questionsBatch7 = [
         "question": "A payroll management portal used by a manufacturing firm in Toledo, Ohio allows administrators to configure customizable notification templates that are later incorporated into automated reporting functions. During an authorized assessment, an ethical hacker submits specially structured input into a template field while creating a test notification.\n\nThe application accepts and stores the value without any noticeable disruption to the interface. Days later, when a scheduled reporting task executes, the resulting dataset includes records beyond the expected scope defined by the report criteria.\n\nFurther review reveals that the reporting engine dynamically constructs database queries using previously stored template values during execution.\n\nDetermine the SQL injection variant illustrated in this scenario.",
         "options": [
             "Stored Procedure Injection",
-            "Second-Order SQL Injection (Correct Answer)",
+            "Second-Order SQL Injection ",
             "Error-Based SQL Injection",
             "Piggybacked Query Injection"
         ],
@@ -887,7 +887,7 @@ const questionsBatch7 = [
         "id": 669,
         "question": "A financial analytics platform in Newark, New Jersey exposes a search parameter used to filter archived transaction records. During controlled testing, a security consultant submits carefully structured input designed to influence how the backend evaluates filtering conditions.\n\nThe application continues to render the standard page layout, but response times fluctuate noticeably when specific logical expressions are introduced. By refining those conditions incrementally, the consultant observes consistent timing differences that align with changes in database evaluation behavior.\n\nThe visible output remains unchanged, yet measurable performance variations provide feedback to the tester. Identify the SQL injection technique being demonstrated.",
         "options": [
-            "Performing Heavy Query-Based Blind SQL Injection (Correct Answer)",
+            "Performing Heavy Query-Based Blind SQL Injection ",
             "Applying Hex Encoding Evasion to obfuscate SQL keywords",
             "Executing Qut-of-Band SQL Injection via database-initiated HTTP requests",
             "Using HTTP Parameter Fragmentation to bypass firewall filtering"
@@ -901,7 +901,7 @@ const questionsBatch7 = [
         "question": "A financial technology company in Charlotte, North Carolina authorizes a controlled red team engagement to evaluate defensive monitoring within its Windows server environment. During testing, the team executes a series of scripted administrative commands through the native automation shell. The security controls initially prevent the activity from completing.\n\nThe tester then modifies how the command content is expressed while preserving its original functionality. After this adjustment, the same administrative operations execute successfully without triggering the operating system's integrated content inspection mechanism.\n\nWhich technique was most likely used to bypass the Windows Antimalware Scan Interface (AMSI)?",
         "options": [
             "Forcing an Error",
-            "Obfuscation (Correct Answer)",
+            "Obfuscation ",
             "PowerShell Downgrade",
             "Memory Hijacking"
         ],
@@ -916,7 +916,7 @@ const questionsBatch7 = [
             "Spoofed session flood attack",
             "ACK flood attack",
             "Fragmentation attack",
-            "SYN flood attack (Correct Answer)"
+            "SYN flood attack "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -929,7 +929,7 @@ const questionsBatch7 = [
             "Exploitation",
             "Information Gathering",
             "Vulnerability Assessment",
-            "Post-Exploitation (Correct Answer)"
+            "Post-Exploitation "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -940,7 +940,7 @@ const questionsBatch7 = [
         "question": "During a forensic log review at a satellite communications provider in Denver, Colorado, cybersecurity analyst Kevin Morales identified subtle timestamp irregularities in archived telemetry records. Although the discrepancies were minor, regulatory reporting standards required confirmation that the system clock was synchronizing correctly with its configured time sources.\n\nKevin needed to interact directly with the host's running time service to review its current associations and operational state. He was not attempting to reset the clock or trace the hierarchy of upstream time authorities, but rather to query the active service for detailed status information from the target machine.\n\nIdentify the command Kevin should execute to obtain this information.",
         "options": [
             "ntptrace [-n] [-m maxhosts] [servername/IP_address]",
-            "ntpq [-inp] [-c command] [host] […] (Correct Answer)",
+            "ntpq [-inp] [-c command] [host] […] ",
             "ntpdc [-ilnps] [-c command] [host] […]",
             "npg -p [host]"
         ],
@@ -954,7 +954,7 @@ const questionsBatch7 = [
         "options": [
             "Capturing Modbus/TCP traffic using Wireshark",
             "Scanning Siemens SIMATIC S7 PLCs",
-            "Scanning Modbus devices (Correct Answer)",
+            "Scanning Modbus devices",
             "Scanning Omron PLC devices"
         ],
         "correctAnswer": 2,
@@ -968,7 +968,7 @@ const questionsBatch7 = [
             "UDP Hijacking",
             "RST Hijacking",
             "Blind Hijacking",
-            "TCP/IP Hijacking (Correct Answer)"
+            "TCP/IP Hijacking "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -981,7 +981,7 @@ const questionsBatch7 = [
             "Predict",
             "Protect",
             "Respond",
-            "Detect (Correct Answer)"
+            "Detect "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -993,7 +993,7 @@ const questionsBatch7 = [
         "options": [
             "E-banking Trojan",
             "Rootkit Trojan",
-            "Botnet Trojan (Correct Answer)",
+            "Botnet Trojan ",
             "Backdoor Trojan"
         ],
         "correctAnswer": 2,
@@ -1007,7 +1007,7 @@ const questionsBatch7 = [
             "Protocol Anomaly Detection",
             "Anomaly Detection",
             "Stateful Protocol Analysis",
-            "Signature Recognition (Correct Answer)"
+            "Signature Recognition"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -1018,7 +1018,7 @@ const questionsBatch7 = [
         "question": "Anthony works as a security consultant for a financial services firm in Chicago, Illinois. During an internal engagement, he reviews traffic logs and observes repeated connection attempts to a service that appears to provide directory-related information beyond a single domain. The responses suggest that the underlying database contains entries representing objects across the entire organization rather than being limited to a single segment.\n\nAs Anthony continues his assessment, he notices that administrators commonly connect to this service when troubleshooting directory-related issues. The service listens on a dedicated port and allows object searches across multiple domains without requiring prior knowledge of the specific domain name. Which service is Anthony most likely enumerating?",
         "options": [
             "Microsoft RPC Endpoint Mapper (TCP/UDP 135)",
-            "Global Catalog Service (TCP/UDP 3268) (Correct Answer)",
+            "Global Catalog Service (TCP/UDP 3268) ",
             "Lightweight Directory Access Protocol (TCP/UDP 389)",
             "Session Initiation Protocol (TCP/UDP 5060, 5061)"
         ],
@@ -1033,7 +1033,7 @@ const questionsBatch7 = [
             "Sending special characters to detect SQL modification behavior",
             "Sending arbitrary data to detect truncation issues",
             "Using right square bracket characters to detect identifier handling issues",
-            "Sending isolated quotation characters to detect unsanitized input (Correct Answer)"
+            "Sending isolated quotation characters to detect unsanitized input "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -1045,7 +1045,7 @@ const questionsBatch7 = [
         "options": [
             "Small Token Space",
             "Timestamp-based Tokens",
-            "Seguential Tokens (Correct Answer)",
+            "Seguential Tokens ",
             "Weak Random Number Generator (PRNG)"
         ],
         "correctAnswer": 2,
@@ -1058,7 +1058,7 @@ const questionsBatch7 = [
         "options": [
             "Adversary",
             "Infrastructure",
-            "Capability (Correct Answer)",
+            "Capability ",
             "Victim"
         ],
         "correctAnswer": 2,
@@ -1071,7 +1071,7 @@ const questionsBatch7 = [
         "options": [
             "FileVault",
             "Rohos Disk Encryption",
-            "VeraCrypt (Correct Answer)",
+            "VeraCrypt ",
             "BitLocker Drive Encryption"
         ],
         "correctAnswer": 2,
@@ -1083,7 +1083,7 @@ const questionsBatch7 = [
         "question": "An internal review at a financial analytics firm in Minneapolis, Minnesota, uncovered unusual query patterns directed at the company's directory services infrastructure. Security engineer Olivia Grant examined the logs and discovered that a user account had been issuing structured directory queries to retrieve lists of user objects, group memberships, and organizational units.\n\nFurther inspection revealed that the account was able to access information about privileged groups containing the word \"Admin\" in their titles. The activity did not involve password guessing or authentication bypass, but rather systematic directory lookups to map internal user and group relationships.\n\nWhat type of enumeration is illustrated in this scenario?",
         "options": [
             "VoIP Enumeration",
-            "LDAP Enumeration (Correct Answer)",
+            "LDAP Enumeration ",
             "SMTP Enumeration",
             "DNS Enumeration"
         ],
@@ -1097,7 +1097,7 @@ const questionsBatch7 = [
         "options": [
             "Extract the Filesystem",
             "Obtain Firmware",
-            "Analyze Firmware (Correct Answer)",
+            "Analyze Firmware ",
             "Emulate Firmware"
         ],
         "correctAnswer": 2,
@@ -1109,7 +1109,7 @@ const questionsBatch7 = [
         "question": "A fintech startup in Austin, Texas authorizes a controlled red team engagement to evaluate the resilience of its web-based loan management platform. At the outset of the engagement, the assessment team concentrates on developing a structural understanding of the application.\n\nThey examine publicly exposed endpoints, observe server responses under different navigation paths, identify accessible directories, and document the relationships between client-side scripts, form parameters, and backend behaviors. Error handling patterns and response variations are cataloged to understand how user interactions are processed across various components of the platform.\n\nThe collected information is used to guide strategic planning for subsequent phases of the engagement.\n\nWithin the web application hacking methodology, which phase is most accurately demonstrated in this scenario?",
         "options": [
             "Maintaining Access",
-            "Scanning (Correct Answer)",
+            "Scanning ",
             "Gaining Access",
             "Reconnaissance"
         ],
@@ -1123,7 +1123,7 @@ const questionsBatch7 = [
         "options": [
             "Man-in-the-Cloud Attack",
             "Side-Channel Attack",
-            "Container Escape (Correct Answer)",
+            "Container Escape ",
             "Golden SAML Attack"
         ],
         "correctAnswer": 2,
@@ -1135,7 +1135,7 @@ const questionsBatch7 = [
         "question": "Natalie Brooks is leading an authorized red team exercise for Sentinel Networks in Seattle. While briefing her team on different attacker profiles, she describes an individual who is new to cybersecurity, actively learning techniques through online communities, and experimenting with basic tools on low-risk targets to build practical skills without causing significant damage.\n\nWhich hacker class best matches this profile?",
         "options": [
             "Blue Hat hacker",
-            "Green Hat hacker (Correct Answer)",
+            "Green Hat hacker ",
             "Gray Hat hacker",
             "Red Hat hacker"
         ],
@@ -1150,7 +1150,7 @@ const questionsBatch7 = [
             "ICMP Tunneling",
             "TCP Sequence Tunneling",
             "HTTR/S Tunneling",
-            "DNS Tunneling (Correct Answer)"
+            "DNS Tunneling "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -1160,7 +1160,7 @@ const questionsBatch7 = [
         "id": 690,
         "question": "A subscription-based analytics platform in Portland, Oregon provides enterprise clients with API access to project dashboards. Each dashboard is associated with a unique identifier included in client-side API requests when retrieving project data.\n\nWhile evaluating access controls, a security analyst signs in using a standard user account and captures a legitimate API request used to retrieve a specific project dashboard. By altering only the identifier value within the request and replaying it through the same authenticated session, the analyst receives data belonging to a different client organization.\n\nThe session remains valid, and no elevated privileges are granted. The behavior indicates that access validation does not adequately verify whether the requesting user is authorized to access the referenced resource.\n\nIdentify the OWASP API security risk illustrated in this scenario.",
         "options": [
-            "Broken Object Level Authorization (BOLA) (Correct Answer)",
+            "Broken Object Level Authorization (BOLA) ",
             "Broken Object Property Level Authorization",
             "Broken Function Level Authorization",
             "Broken Authentication"
@@ -1176,7 +1176,7 @@ const questionsBatch7 = [
             "Persistence",
             "Point of Entry",
             "Achieving Objectives",
-            "Code Execution (Correct Answer)"
+            "Code Execution "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -1186,7 +1186,7 @@ const questionsBatch7 = [
         "id": 692,
         "question": "An enterprise collaboration platform used by a pharmaceutical distributor in Boston, Massachusetts relies on a centralized identity store to validate employee credentials. While reviewing the authentication workflow, a security tester notices that user-provided values are directly embedded into backend lookup expressions responsible for locating account records.\n\nWhen specific logical operators and wildcard characters are introduced into the username field, the application's record-matching behavior changes. Instead of evaluating a single identity entry, the backend process begins matching a broader set of records than intended, altering the outcome of the authentication check.\n\nThe issue arises from improper handling of input within directory-based search logic.\n\nFrom the following options, identify the injection technique illustrated in this scenario.",
         "options": [
-            "LDAP Injection (Correct Answer)",
+            "LDAP Injection ",
             "OS Command Injection",
             "SQL Injection",
             "XPath Injection"
@@ -1202,7 +1202,7 @@ const questionsBatch7 = [
             "NFS Enumeration",
             "NetBIOS Enumeration",
             "SNMP Enumeration",
-            "NTP Enumeration (Correct Answer)"
+            "NTP Enumeration "
         ],
         "correctAnswer": 3,
         "userAnswer": null,
@@ -1212,7 +1212,7 @@ const questionsBatch7 = [
         "id": 694,
         "question": "During an internal security review at a transportation authority in Columbus, Ohio, a red team analyst positioned himself on the same local network segment as several domain-joined administrative workstations. Over several hours, he recorded authentication exchanges as legitimate users performed their routine logon activities across the network.\n\nHe later analyzed the captured traffic to recover valid credentials associated with privileged accounts. Based on the attacker's actions, how should this password attack be classified?",
         "options": [
-            "Passive Online Attack (Correct Answer)",
+            "Passive Online Attack ",
             "Non-Electronic Attack",
             "Active Online Attack",
             "Offline Attack"
@@ -1227,7 +1227,7 @@ const questionsBatch7 = [
         "options": [
             "Reconnaissance",
             "Vulnerability Scanning",
-            "Maintaining Access (Correct Answer)",
+            "Maintaining Access",
             "Clearing Tracks"
         ],
         "correctAnswer": 2,
@@ -1240,7 +1240,7 @@ const questionsBatch7 = [
         "options": [
             "Perform manual packet inspection using a protocol analyzer",
             "Monitor for abnormal surges of repeated ACK responses",
-            "Use an Intrusion Detection System (IDS) (Correct Answer)",
+            "Use an Intrusion Detection System (IDS) ",
             "Evaluate authentication token generation patterns"
         ],
         "correctAnswer": 2,
@@ -1253,7 +1253,7 @@ const questionsBatch7 = [
         "options": [
             "TCP Parameter Manipulation",
             "Reverse ICMP Tunnel",
-            "DNS Tunneling (Correct Answer)",
+            "DNS Tunneling ",
             "Reverse HTTP Shell"
         ],
         "correctAnswer": 2,
@@ -1264,7 +1264,7 @@ const questionsBatch7 = [
         "id": 698,
         "question": "A logistics technology provider in Kansas City, Missouri conducts an internal review after an ethical hacker demonstrates several recurring input-handling weaknesses across different customer-facing web applications. The findings show that validation logic varies between modules, with many controls implemented inconsistently across components developed by separate teams.\n\nAlthough immediate patches are applied to address the identified flaws, similar issues have surfaced in previous platform iterations despite corrective updates. Leadership determines that isolated fixes are insufficient and initiates an effort to standardize how security requirements are defined and incorporated across future development initiatives.\n\nBased on the web application attack countermeasures, which category best aligns with this remediation approach?",
         "options": [
-            "Insecure Design (Correct Answer)",
+            "Insecure Design ",
             "Broken Access Control",
             "Security Misconfiguration",
             "Cryptographic Failures / Sensitive Data Exposure"
@@ -1277,7 +1277,7 @@ const questionsBatch7 = [
         "id": 699,
         "question": "During a targeted intrusion against a cloud infrastructure company in Salt Lake City, Utah, an attacker distributes a modified installation package of a legitimate network diagnostic utility widely used by employees. Before distributing the package, the attacker binds a malicious remote-access payload with the original executable so that both components are installed together. When users launch the diagnostic tool, it performs its normal troubleshooting functions, while the hidden payload simultaneously executes in the background and establishes communication with a remote command server.\n\nFrom a malware deployment perspective, what technique best describes this approach?",
         "options": [
-            "Wrapper (Correct Answer)",
+            "Wrapper",
             "Downloader",
             "Packer",
             "Dropper"
@@ -1290,7 +1290,7 @@ const questionsBatch7 = [
         "id": 700,
         "question": "A cloud service provider in Singapore is refining its defensive monitoring strategy to identify large-scale denial-of-service attempts against hosted applications. The security engineering team wants a detection mechanism that continuously evaluates incoming traffic streams and statistically determines the exact moment when normal behavior shifts into anomalous activity.\n\nRather than relying solely on static baselines or historical comparisons, the team prefers an approach that detects abrupt deviations in real time by identifying structural breaks in traffic metrics as they occur.\n\nWhich DDoS detection technique best fits this requirement?",
         "options": [
-            "Sequential Change-Point Detection (Correct Answer)",
+            "Sequential Change-Point Detection",
             "Wavelet-Based Signal Analysis",
             "Traffic Pattern Analysis",
             "Activity Profiling"
