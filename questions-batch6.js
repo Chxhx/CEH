@@ -482,7 +482,7 @@ const questionsBatch6 = [
     },
     {
         "id": 538,
-        "question": "https://reurl.cc/v5o6vN https://www.ruten.com.tw/item/show? 21615500697\n\nClark is a talented coder and as such has found a vulnerability in a well-known application. Unconcerned about the ethics of the situation, he has developed an exploit that can leverage this unknown vulnerability.\n\nBased on this information, which of the following is most correct?",
+        "question": "https://www.ruten.com.tw/item/show? 21615500697\n\nClark is a talented coder and as such has found a vulnerability in a well-known application. Unconcerned about the ethics of the situation, he has developed an exploit that can leverage this unknown vulnerability.\n\nBased on this information, which of the following is most correct?",
         "options": [
             "Clark has violated U.S. Code Section 1027.",
             "Clark has developed a zero-day. ",
