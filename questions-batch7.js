@@ -495,7 +495,7 @@ const questionsBatch7 = [
     },
     {
         "id": 639,
-        "question": "Scenario: 1.Victim opens the attacker’s web site. 2.Attacker sets up a web site which contains interesting and attractive content like ‘Do you want to make S1000 in a day?’. 3.Victim clicks to the interesting and attractive content URL. 4.Attacker creates a transparent ‘iframe’ in front of the URL which victim attempts to click, so victim thinks that he/she clicks to the ‘Do you want to make $1000 in a day?’ URL but actually he/she clicks to the content or URL that exists in the transparent ‘iframe’ which is setup by the attacker.\n\nWhat is the name of the attack which is mentioned in the scenario?",
+        "question": "Scenario: 1.Victim opens the attacker’s web site. \n 2.Attacker sets up a web site which contains interesting and attractive content like ‘Do you want to make S1000 in a day?’. \n 3.Victim clicks to the interesting and attractive content URL. \n 4.Attacker creates a transparent ‘iframe’ in front of the URL which victim attempts to click, so victim thinks that he/she clicks to the ‘Do you want to make $1000 in a day?’ URL but actually he/she clicks to the content or URL that exists in the transparent ‘iframe’ which is setup by the attacker.\nWhat is the name of the attack which is mentioned in the scenario?",
         "options": [
             "HTTP Parameter Pollution",
             "Clickjacking Attack ",
