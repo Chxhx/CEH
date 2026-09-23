@@ -627,7 +627,7 @@ const questionsBatch6 = [
         "id": 549,
         "question": "Which of the following is a proprietary information security standard that requires organizations to follow security best practices and use 12 high-level requirements, aligned across six goals?",
         "options": [
-            "sox",
+            "SOX",
             "PCI-DSS ",
             "Risk Management Framework",
             "FISMA"
