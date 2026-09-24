@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>平哥的 CEH</title>
+
+    <title>CEH 資訊安全認證考試系統（740題）</title>
+
     <style>
         * {
             margin: 0;
@@ -12,364 +14,47 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        button,
+        input {
+            font: inherit;
+        }
+
+        button:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+            transform: none !important;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             overflow: hidden;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
 
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
             padding: 30px;
+            color: #fff;
             text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
 
         .header h1 {
-            font-size: 2em;
             margin-bottom: 10px;
+            font-size: 2em;
         }
 
         .header p {
+            font-size: 1.1em;
             opacity: 0.9;
-            font-size: 1.1em;
-        }
-
-        .progress-bar-container {
-            background: #f0f0f0;
-            padding: 20px 30px;
-            border-bottom: 2px solid #e0e0e0;
-        }
-
-        .progress-info {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .progress-info span {
-            font-weight: bold;
-            color: #333;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 30px;
-            background: #e0e0e0;
-            border-radius: 15px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-            transition: width 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-        }
-
-        .controls {
-            padding: 20px 30px;
-            background: #f9f9f9;
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            border-bottom: 2px solid #e0e0e0;
-        }
-
-        .btn {
-            padding: 12px 24px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        .btn-secondary {
-            background: #6c757d;
-            color: white;
-        }
-
-        .btn-secondary:hover {
-            background: #5a6268;
-        }
-
-        .btn-success {
-            background: #28a745;
-            color: white;
-        }
-
-        .btn-success:hover {
-            background: #218838;
-        }
-
-        .btn-warning {
-            background: #ffc107;
-            color: #333;
-        }
-
-        .btn-warning:hover {
-            background: #e0a800;
-        }
-
-        .btn-info {
-            background: #17a2b8;
-            color: white;
-        }
-
-        .btn-info:hover {
-            background: #138496;
-        }
-
-        .search-box {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 1em;
-        }
-
-        .search-box input:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        .content {
-            padding: 30px;
-        }
-
-        .question-card {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            border: 2px solid #e0e0e0;
-        }
-
-        .question-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .question-number {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #667eea;
-        }
-
-        .bookmark-btn {
-            background: none;
-            border: none;
-            font-size: 1.5em;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .bookmark-btn:hover {
-            transform: scale(1.2);
-        }
-
-        .bookmark-btn.active {
-            color: #ffc107;
-        }
-
-        .question-text {
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: #333;
-            margin-bottom: 25px;
-            white-space: pre-wrap;
-        }
-
-        .options {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .option {
-            padding: 15px 20px;
-            background: white;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .option:hover {
-            border-color: #667eea;
-            transform: translateX(5px);
-        }
-
-        .option.selected {
-            border-color: #667eea;
-            background: #e8eaf6;
-        }
-
-        .option.correct {
-            border-color: #28a745;
-            background: #d4edda;
-        }
-
-        .option.incorrect {
-            border-color: #dc3545;
-            background: #f8d7da;
-        }
-
-        .option-label {
-            font-weight: bold;
-            margin-right: 15px;
-            color: #667eea;
-            min-width: 30px;
-        }
-
-        .option-text {
-            flex: 1;
-        }
-
-        .navigation {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .question-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .question-grid-item {
-            padding: 10px;
-            text-align: center;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: bold;
-        }
-
-        .question-grid-item:hover {
-            transform: scale(1.1);
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-        }
-
-        .question-grid-item.answered {
-            background: #d4edda;
-            border-color: #28a745;
-        }
-
-        .question-grid-item.current {
-            background: #667eea;
-            color: white;
-            border-color: #667eea;
-        }
-
-        .question-grid-item.bookmarked {
-            background: #fff3cd;
-            border-color: #ffc107;
-        }
-
-        .results {
-            text-align: center;
-            padding: 40px;
-        }
-
-        .results h2 {
-            font-size: 2.5em;
-            color: #667eea;
-            margin-bottom: 30px;
-        }
-
-        .score-display {
-            font-size: 4em;
-            font-weight: bold;
-            color: #28a745;
-            margin: 30px 0;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .stat-card {
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            border: 2px solid #e0e0e0;
-        }
-
-        .stat-card h3 {
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-
-        .stat-card p {
-            font-size: 2em;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .filter-buttons {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-
-        .loading {
-            text-align: center;
-            padding: 50px;
-            font-size: 1.2em;
-            color: #667eea;
         }
 
         .batch-selector {
@@ -391,98 +76,675 @@
 
         .batch-btn {
             padding: 15px;
-            border: 2px solid #667eea;
-            background: white;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: bold;
             color: #667eea;
+            font-weight: bold;
+            cursor: pointer;
+            background: #fff;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            transition: all 0.3s ease;
         }
 
         .batch-btn:hover {
+            color: #fff;
             background: #667eea;
-            color: white;
             transform: translateY(-2px);
         }
 
         .batch-btn.active {
+            color: #fff;
             background: #667eea;
-            color: white;
+        }
+
+        .batch-btn.random-mode {
+            color: #8a4b00;
+            border-color: #ff9800;
+        }
+
+        .batch-btn.random-mode:hover,
+        .batch-btn.random-mode.active {
+            color: #fff;
+            background: #ff9800;
+        }
+
+        .batch-btn.bookmark-mode {
+            color: #896b00;
+            border-color: #ffc107;
+        }
+
+        .batch-btn.bookmark-mode:hover,
+        .batch-btn.bookmark-mode.active {
+            color: #333;
+            background: #ffc107;
+        }
+
+        .progress-bar-container {
+            padding: 20px 30px;
+            background: #f0f0f0;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .progress-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .progress-info span {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .progress-bar {
+            position: relative;
+            width: 100%;
+            height: 30px;
+            overflow: hidden;
+            background: #e0e0e0;
+            border-radius: 15px;
+        }
+
+        .progress-fill {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 0;
+            height: 100%;
+            min-width: 0;
+            overflow: hidden;
+            color: #fff;
+            font-weight: bold;
+            white-space: nowrap;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+        }
+
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px 30px;
+            background: #f9f9f9;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            color: #fff;
+            background: #6c757d;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .btn-success {
+            color: #fff;
+            background: #28a745;
+        }
+
+        .btn-success:hover {
+            background: #218838;
+        }
+
+        .btn-warning {
+            color: #333;
+            background: #ffc107;
+        }
+
+        .btn-warning:hover {
+            background: #e0a800;
+        }
+
+        .btn-info {
+            color: #fff;
+            background: #17a2b8;
+        }
+
+        .btn-info:hover {
+            background: #138496;
+        }
+
+        .btn-danger {
+            color: #fff;
+            background: #dc3545;
+        }
+
+        .btn-danger:hover {
+            background: #c82333;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px;
+            font-size: 1em;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .question-card {
+            padding: 30px;
+            margin-bottom: 30px;
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+        }
+
+        .question-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .question-number {
+            color: #667eea;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        .question-meta {
+            margin-top: 5px;
+            color: #6c757d;
+            font-size: 0.9em;
+            font-weight: normal;
+        }
+
+        .bookmark-btn {
+            padding: 5px;
+            font-size: 1.8em;
+            cursor: pointer;
+            background: none;
+            border: none;
+            transition: transform 0.2s ease;
+        }
+
+        .bookmark-btn:hover {
+            transform: scale(1.2);
+        }
+
+        .bookmark-btn.active {
+            color: #ffc107;
+        }
+
+        .question-text {
+            margin-bottom: 25px;
+            color: #333;
+            font-size: 1.1em;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .option {
+            display: flex;
+            align-items: flex-start;
+            padding: 15px 20px;
+            cursor: pointer;
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .option:hover {
+            border-color: #667eea;
+            transform: translateX(5px);
+        }
+
+        .option.selected {
+            background: #e8eaf6;
+            border-color: #667eea;
+        }
+
+        .option.correct {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+
+        .option.incorrect {
+            background: #f8d7da;
+            border-color: #dc3545;
+        }
+
+        .option-label {
+            min-width: 30px;
+            margin-right: 15px;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .option-text {
+            flex: 1;
+            white-space: pre-wrap;
+        }
+
+        .navigation {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .question-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(58px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .question-grid-item {
+            padding: 10px 5px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .question-grid-item:hover {
+            z-index: 1;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            transform: scale(1.08);
+        }
+
+        .question-grid-item.answered {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+
+        .question-grid-item.current {
+            color: #fff;
+            background: #667eea;
+            border-color: #667eea;
+        }
+
+        .question-grid-item.bookmarked {
+            color: #6c5500;
+            background: #fff3cd;
+            border-color: #ffc107;
+        }
+
+        .question-grid-item.current.bookmarked {
+            color: #fff;
+            background: linear-gradient(135deg, #667eea 50%, #ffc107 50%);
+            border-color: #667eea;
+        }
+
+        .results {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .results h2 {
+            margin-bottom: 20px;
+            color: #667eea;
+            font-size: 2.5em;
+        }
+
+        .score-display {
+            margin: 30px 0;
+            color: #28a745;
+            font-size: 4em;
+            font-weight: bold;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            padding: 20px;
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+        }
+
+        .stat-card h3 {
+            margin-bottom: 10px;
+            color: #667eea;
+        }
+
+        .stat-card p {
+            color: #333;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .loading,
+        .empty-state {
+            padding: 50px 20px;
+            color: #667eea;
+            text-align: center;
+        }
+
+        .loading h2,
+        .empty-state h2 {
+            margin-bottom: 15px;
+        }
+
+        .empty-state p {
+            margin-bottom: 25px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .mode-description {
+            padding: 15px;
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.7;
+            background: #eef0ff;
+            border-left: 5px solid #667eea;
+            border-radius: 8px;
+        }
+
+        .hidden {
+            display: none !important;
         }
 
         @media (max-width: 768px) {
+            body {
+                padding: 8px;
+            }
+
+            .container {
+                border-radius: 12px;
+            }
+
+            .header {
+                padding: 22px 15px;
+            }
+
             .header h1 {
-                font-size: 1.5em;
+                font-size: 1.45em;
+            }
+
+            .batch-selector,
+            .progress-bar-container,
+            .controls,
+            .content {
+                padding: 18px;
             }
 
             .controls {
                 flex-direction: column;
             }
 
+            .search-box {
+                min-width: 100%;
+            }
+
+            .question-card {
+                padding: 20px 15px;
+            }
+
             .question-grid {
-                grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
             }
 
             .navigation {
                 flex-direction: column;
             }
+
+            .navigation .btn {
+                width: 100%;
+            }
+
+            .results {
+                padding: 25px 10px;
+            }
+
+            .score-display {
+                font-size: 3em;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <div class="header">
+        <header class="header">
             <h1>🔐 CEH 資訊安全認證考試系統</h1>
-            <p>Certified Ethical Hacker - 完整題庫 (740題)</p>
-        </div>
+            <p>Certified Ethical Hacker－完整題庫（740題）</p>
+        </header>
 
-        <div class="batch-selector">
-            <h3>📚 選擇題庫批次：</h3>
+        <section class="batch-selector">
+            <h3>📚 選擇練習模式：</h3>
+
             <div class="batch-buttons">
-                <button class="batch-btn" onclick="loadBatch(1)">第 1 批 (1-100題)</button>
-                <button class="batch-btn" onclick="loadBatch(2)">第 2 批 (101-200題)</button>
-                <button class="batch-btn" onclick="loadBatch(3)">第 3 批 (201-300題)</button>
-                <button class="batch-btn" onclick="loadBatch(4)">第 4 批 (301-400題)</button>
-                <button class="batch-btn" onclick="loadBatch(5)">第 5 批 (401-500題)</button>
-                <button class="batch-btn" onclick="loadBatch(6)">第 6 批 (501-600題)</button>
-                <button class="batch-btn" onclick="loadBatch(7)">第 7 批 (601-700題)</button>
-                <button class="batch-btn" onclick="loadBatch(8)">第 8 批 (701-740題)</button>
-            </div>
-        </div>
+                <button
+                    id="mode-batch-1"
+                    class="batch-btn"
+                    onclick="loadBatch(1)"
+                >
+                    第 1 批<br>1–100 題
+                </button>
 
-        <div class="progress-bar-container">
-            <div class="progress-info">
-                <span>📊 進度：<span id="answered-count">0</span> / <span id="total-count">0</span></span>
-                <span>✅ 答對：<span id="correct-count">0</span></span>
-                <span>❌ 答錯：<span id="incorrect-count">0</span></span>
-                <span>⭐ 標記：<span id="bookmark-count">0</span></span>
+                <button
+                    id="mode-batch-2"
+                    class="batch-btn"
+                    onclick="loadBatch(2)"
+                >
+                    第 2 批<br>101–200 題
+                </button>
+
+                <button
+                    id="mode-batch-3"
+                    class="batch-btn"
+                    onclick="loadBatch(3)"
+                >
+                    第 3 批<br>201–300 題
+                </button>
+
+                <button
+                    id="mode-batch-4"
+                    class="batch-btn"
+                    onclick="loadBatch(4)"
+                >
+                    第 4 批<br>301–400 題
+                </button>
+
+                <button
+                    id="mode-batch-5"
+                    class="batch-btn"
+                    onclick="loadBatch(5)"
+                >
+                    第 5 批<br>401–500 題
+                </button>
+
+                <button
+                    id="mode-batch-6"
+                    class="batch-btn"
+                    onclick="loadBatch(6)"
+                >
+                    第 6 批<br>501–600 題
+                </button>
+
+                <button
+                    id="mode-batch-7"
+                    class="batch-btn"
+                    onclick="loadBatch(7)"
+                >
+                    第 7 批<br>601–700 題
+                </button>
+
+                <button
+                    id="mode-batch-8"
+                    class="batch-btn"
+                    onclick="loadBatch(8)"
+                >
+                    第 8 批<br>701–740 題
+                </button>
+
+                <button
+                    id="mode-random-100"
+                    class="batch-btn random-mode"
+                    onclick="loadRandomQuestions(100)"
+                >
+                    🎲 隨機 100 題
+                </button>
+
+                <button
+                    id="mode-random-150"
+                    class="batch-btn random-mode"
+                    onclick="loadRandomQuestions(150)"
+                >
+                    🎲 隨機 150 題
+                </button>
+
+                <button
+                    id="mode-bookmarked"
+                    class="batch-btn bookmark-mode"
+                    onclick="loadBookmarkedPractice()"
+                >
+                    ⭐ 收藏題練習
+                    <br>
+                    <span id="top-bookmark-mode-count">0 題</span>
+                </button>
             </div>
+        </section>
+
+        <section class="progress-bar-container">
+            <div class="progress-info">
+                <span>
+                    📊 進度：
+                    <span id="answered-count">0</span>
+                    /
+                    <span id="total-count">0</span>
+                </span>
+
+                <span>
+                    ✅ 答對：
+                    <span id="correct-count">0</span>
+                </span>
+
+                <span>
+                    ❌ 答錯：
+                    <span id="incorrect-count">0</span>
+                </span>
+
+                <span>
+                    ⭐ 收藏：
+                    <span id="bookmark-count">0</span>
+                </span>
+            </div>
+
             <div class="progress-bar">
                 <div class="progress-fill" id="progress-fill">0%</div>
             </div>
-        </div>
+        </section>
 
-        <div class="controls">
+        <section class="controls">
             <div class="search-box">
-                <input type="text" id="search-input" placeholder="🔍 搜尋題目關鍵字...">
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="🔍 搜尋目前練習題目的 ID、題目或選項..."
+                    autocomplete="off"
+                >
             </div>
-            <button class="btn btn-primary" onclick="showQuestionGrid()">📋 題目總覽</button>
-            <button class="btn btn-warning" onclick="filterBookmarked()">⭐ 已標記</button>
-            <button class="btn btn-info" onclick="showBatchSelector()">📚 切換批次</button>
-            <button class="btn btn-secondary" onclick="resetExam()">🔄 重新開始</button>
-            <button class="btn btn-success" onclick="submitExam()">✅ 提交答案</button>
-        </div>
 
-        <div class="content" id="content">
+            <button
+                class="btn btn-primary"
+                onclick="showQuestionGrid()"
+            >
+                📋 題目總覽
+            </button>
+
+            <button
+                class="btn btn-warning"
+                onclick="filterBookmarked()"
+            >
+                ⭐ 已收藏
+            </button>
+
+            <button
+                class="btn btn-info"
+                onclick="showBatchSelector()"
+            >
+                📚 切換模式
+            </button>
+
+            <button
+                class="btn btn-secondary"
+                onclick="resetExam()"
+            >
+                🔄 重新開始
+            </button>
+
+            <button
+                class="btn btn-success"
+                onclick="submitExam()"
+            >
+                ✅ 提交答案
+            </button>
+        </section>
+
+        <main class="content" id="content">
             <div class="loading">
-                <h2>📚 請選擇題庫批次</h2>
-                <p>請從上方選擇要練習的題目批次</p>
+                <h2>📚 請選擇練習模式</h2>
+                <p>可選擇依序批次、隨機抽題或收藏題練習。</p>
             </div>
-        </div>
+        </main>
     </div>
 
-    <!-- 載入題庫檔案 -->
+    <!-- 題庫 JS 不需要修改 -->
     <script src="questions-batch1.js"></script>
     <script src="questions-batch2.js"></script>
     <script src="questions-batch3.js"></script>
@@ -493,111 +755,674 @@
     <script src="questions-batch8.js"></script>
 
     <script>
-        let questions = [];
-        let currentQuestionIndex = 0;
-        let showAnswers = false;
-        let currentBatch = 0;
+        "use strict";
 
-        // 載入指定批次
-        function loadBatch(batchNumber) {
-            currentBatch = batchNumber;
-            
-            // 根據批次號碼載入對應題庫
-            switch(batchNumber) {
-                case 1: questions = questionsBatch1; break;
-                case 2: questions = questionsBatch2; break;
-                case 3: questions = questionsBatch3; break;
-                case 4: questions = questionsBatch4; break;
-                case 5: questions = questionsBatch5; break;
-                case 6: questions = questionsBatch6; break;
-                case 7: questions = questionsBatch7; break;
-                case 8: questions = questionsBatch8; break;
+        /*
+         * ==========================================================
+         * 全域設定
+         * ==========================================================
+         */
+
+        const BOOKMARK_STORAGE_KEY = "ceh-bookmarked-question-ids";
+
+        const LEGACY_PROGRESS_PREFIX = "examProgress_batch";
+
+        let allQuestions = [];
+        let questions = [];
+
+        let bookmarkedQuestionIds = new Set();
+
+        let currentQuestionIndex = 0;
+        let currentBatch = 0;
+        let currentMode = "none";
+        let currentRandomCount = 0;
+        let showAnswers = false;
+
+        /*
+         * currentMode：
+         * none        尚未選擇模式
+         * batch       依批次練習
+         * random      隨機練習
+         * bookmarked  收藏題練習
+         */
+
+        /*
+         * ==========================================================
+         * 題庫與資料初始化
+         * ==========================================================
+         */
+
+        function getAvailableBatches() {
+            return [
+                typeof questionsBatch1 !== "undefined"
+                    ? questionsBatch1
+                    : [],
+
+                typeof questionsBatch2 !== "undefined"
+                    ? questionsBatch2
+                    : [],
+
+                typeof questionsBatch3 !== "undefined"
+                    ? questionsBatch3
+                    : [],
+
+                typeof questionsBatch4 !== "undefined"
+                    ? questionsBatch4
+                    : [],
+
+                typeof questionsBatch5 !== "undefined"
+                    ? questionsBatch5
+                    : [],
+
+                typeof questionsBatch6 !== "undefined"
+                    ? questionsBatch6
+                    : [],
+
+                typeof questionsBatch7 !== "undefined"
+                    ? questionsBatch7
+                    : [],
+
+                typeof questionsBatch8 !== "undefined"
+                    ? questionsBatch8
+                    : []
+            ];
+        }
+
+        function collectAllQuestions() {
+            allQuestions = getAvailableBatches()
+                .flat()
+                .filter(function (question) {
+                    return (
+                        question &&
+                        question.id !== undefined &&
+                        question.id !== null
+                    );
+                })
+                .sort(function (a, b) {
+                    return Number(a.id) - Number(b.id);
+                });
+        }
+
+        function escapeHTML(value) {
+            return String(value ?? "")
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        function clearSearchInput() {
+            const searchInput =
+                document.getElementById("search-input");
+
+            if (searchInput) {
+                searchInput.value = "";
+            }
+        }
+
+        /*
+         * ==========================================================
+         * 收藏資料
+         * ==========================================================
+         */
+
+        function loadBookmarkIds() {
+            try {
+                const saved =
+                    localStorage.getItem(BOOKMARK_STORAGE_KEY);
+
+                const parsed = saved ? JSON.parse(saved) : [];
+
+                if (!Array.isArray(parsed)) {
+                    bookmarkedQuestionIds = new Set();
+                    return;
+                }
+
+                bookmarkedQuestionIds = new Set(
+                    parsed
+                        .map(function (id) {
+                            return Number(id);
+                        })
+                        .filter(function (id) {
+                            return Number.isFinite(id);
+                        })
+                );
+            } catch (error) {
+                console.warn(
+                    "收藏資料讀取失敗，已建立新的收藏清單。",
+                    error
+                );
+
+                bookmarkedQuestionIds = new Set();
+            }
+        }
+
+        function saveBookmarkIds() {
+            try {
+                const ids = Array.from(bookmarkedQuestionIds)
+                    .map(function (id) {
+                        return Number(id);
+                    })
+                    .filter(function (id) {
+                        return Number.isFinite(id);
+                    })
+                    .sort(function (a, b) {
+                        return a - b;
+                    });
+
+                localStorage.setItem(
+                    BOOKMARK_STORAGE_KEY,
+                    JSON.stringify(ids)
+                );
+            } catch (error) {
+                console.warn("收藏資料儲存失敗。", error);
+            }
+        }
+
+        /*
+         * 從舊版 examProgress_batch1～8 中取出收藏，
+         * 接著刪除舊版作答進度。
+         */
+        function migrateLegacyBookmarks() {
+            loadBookmarkIds();
+
+            for (let batch = 1; batch <= 8; batch++) {
+                const oldKey =
+                    LEGACY_PROGRESS_PREFIX + batch;
+
+                const saved = localStorage.getItem(oldKey);
+
+                if (!saved) {
+                    continue;
+                }
+
+                try {
+                    const data = JSON.parse(saved);
+
+                    if (
+                        data &&
+                        Array.isArray(data.questions)
+                    ) {
+                        data.questions.forEach(function (question) {
+                            if (
+                                question &&
+                                question.bookmarked &&
+                                question.id !== undefined
+                            ) {
+                                bookmarkedQuestionIds.add(
+                                    Number(question.id)
+                                );
+                            }
+                        });
+                    }
+                } catch (error) {
+                    console.warn(
+                        "第 " +
+                        batch +
+                        " 批舊資料無法解析，已略過。",
+                        error
+                    );
+                }
+
+                localStorage.removeItem(oldKey);
             }
 
-            // 更新批次按鈕狀態
-            document.querySelectorAll('.batch-btn').forEach((btn, index) => {
-                btn.classList.toggle('active', index + 1 === batchNumber);
+            saveBookmarkIds();
+        }
+
+        function applyBookmarksToQuestions() {
+            allQuestions.forEach(function (question) {
+                question.bookmarked =
+                    bookmarkedQuestionIds.has(
+                        Number(question.id)
+                    );
+            });
+
+            updateBookmarkDisplays();
+        }
+
+        function updateBookmarkDisplays() {
+            const count = bookmarkedQuestionIds.size;
+
+            const bookmarkCount =
+                document.getElementById("bookmark-count");
+
+            const topBookmarkModeCount =
+                document.getElementById(
+                    "top-bookmark-mode-count"
+                );
+
+            if (bookmarkCount) {
+                bookmarkCount.textContent = count;
+            }
+
+            if (topBookmarkModeCount) {
+                topBookmarkModeCount.textContent =
+                    count + " 題";
+            }
+        }
+
+        /*
+         * ==========================================================
+         * 作答紀錄
+         * ==========================================================
+         */
+
+        function clearAllAnswers() {
+            allQuestions.forEach(function (question) {
+                question.userAnswer = null;
             });
 
             currentQuestionIndex = 0;
             showAnswers = false;
-            loadProgress();
+        }
+
+        function prepareNewPractice() {
+            clearAllAnswers();
+            clearSearchInput();
+        }
+
+        /*
+         * ==========================================================
+         * 隨機抽題
+         * ==========================================================
+         */
+
+        function shuffleQuestions(source) {
+            const result = source.slice();
+
+            for (
+                let index = result.length - 1;
+                index > 0;
+                index--
+            ) {
+                const randomIndex =
+                    Math.floor(Math.random() * (index + 1));
+
+                const temporary = result[index];
+
+                result[index] = result[randomIndex];
+                result[randomIndex] = temporary;
+            }
+
+            return result;
+        }
+
+        /*
+         * ==========================================================
+         * 練習模式
+         * ==========================================================
+         */
+
+        function loadBatch(batchNumber) {
+            const batches = getAvailableBatches();
+            const selectedBatch = batches[batchNumber - 1];
+
+            if (
+                !Array.isArray(selectedBatch) ||
+                selectedBatch.length === 0
+            ) {
+                alert("找不到指定的題庫批次。");
+                return;
+            }
+
+            prepareNewPractice();
+
+            currentMode = "batch";
+            currentBatch = batchNumber;
+            currentRandomCount = 0;
+
+            questions = selectedBatch.slice();
+
+            applyBookmarksToQuestions();
+            updateModeButtons();
             displayQuestion();
         }
 
-        // 顯示批次選擇器
+        function loadRandomQuestions(count) {
+            if (allQuestions.length === 0) {
+                alert("目前沒有可使用的題目。");
+                return;
+            }
+
+            prepareNewPractice();
+
+            currentMode = "random";
+            currentBatch = 0;
+            currentRandomCount = count;
+
+            questions = shuffleQuestions(allQuestions).slice(
+                0,
+                Math.min(count, allQuestions.length)
+            );
+
+            applyBookmarksToQuestions();
+            updateModeButtons();
+            displayQuestion();
+        }
+
+        function loadBookmarkedPractice() {
+            prepareNewPractice();
+
+            currentMode = "bookmarked";
+            currentBatch = 0;
+            currentRandomCount = 0;
+
+            applyBookmarksToQuestions();
+
+            questions = allQuestions.filter(function (question) {
+                return bookmarkedQuestionIds.has(
+                    Number(question.id)
+                );
+            });
+
+            updateModeButtons();
+            updateProgress();
+
+            if (questions.length === 0) {
+                showEmptyBookmarkMessage();
+                return;
+            }
+
+            displayQuestion();
+        }
+
+        function getCurrentModeName() {
+            if (currentMode === "batch") {
+                return "第 " + currentBatch + " 批";
+            }
+
+            if (currentMode === "random") {
+                return "隨機 " +
+                    currentRandomCount +
+                    " 題";
+            }
+
+            if (currentMode === "bookmarked") {
+                return "收藏題練習";
+            }
+
+            return "尚未選擇模式";
+        }
+
+        function updateModeButtons() {
+            document
+                .querySelectorAll(
+                    ".batch-selector .batch-btn"
+                )
+                .forEach(function (button) {
+                    button.classList.remove("active");
+                });
+
+            let activeButton = null;
+
+            if (currentMode === "batch") {
+                activeButton = document.getElementById(
+                    "mode-batch-" + currentBatch
+                );
+            } else if (currentMode === "random") {
+                activeButton = document.getElementById(
+                    "mode-random-" + currentRandomCount
+                );
+            } else if (currentMode === "bookmarked") {
+                activeButton =
+                    document.getElementById(
+                        "mode-bookmarked"
+                    );
+            }
+
+            if (activeButton) {
+                activeButton.classList.add("active");
+            }
+        }
+
+        function createBatchSelectorButton(
+            batchNumber,
+            rangeText
+        ) {
+            const active =
+                currentMode === "batch" &&
+                currentBatch === batchNumber;
+
+            return `
+                <button
+                    class="batch-btn ${active ? "active" : ""}"
+                    onclick="loadBatch(${batchNumber})"
+                >
+                    第 ${batchNumber} 批
+                    <br>
+                    ${rangeText}
+                </button>
+            `;
+        }
+
         function showBatchSelector() {
-            const content = document.getElementById('content');
+            const content =
+                document.getElementById("content");
+
             content.innerHTML = `
                 <div class="question-card">
-                    <h2 style="margin-bottom: 20px;">📚 選擇題庫批次</h2>
+                    <h2 style="margin-bottom: 20px;">
+                        📚 選擇練習模式
+                    </h2>
+
+                    <div class="mode-description">
+                        每次重新開啟頁面時，作答紀錄會自動清空；
+                        收藏題目則會繼續保留。
+                    </div>
+
+                    <h3 style="margin: 20px 0 12px;">
+                        依序批次練習
+                    </h3>
+
                     <div class="batch-buttons">
-                        <button class="batch-btn ${currentBatch === 1 ? 'active' : ''}" onclick="loadBatch(1)">
-                            第 1 批<br>(1-100題)
+                        ${createBatchSelectorButton(1, "1–100 題")}
+                        ${createBatchSelectorButton(2, "101–200 題")}
+                        ${createBatchSelectorButton(3, "201–300 題")}
+                        ${createBatchSelectorButton(4, "301–400 題")}
+                        ${createBatchSelectorButton(5, "401–500 題")}
+                        ${createBatchSelectorButton(6, "501–600 題")}
+                        ${createBatchSelectorButton(7, "601–700 題")}
+                        ${createBatchSelectorButton(8, "701–740 題")}
+                    </div>
+
+                    <h3 style="margin: 30px 0 12px;">
+                        隨機與收藏練習
+                    </h3>
+
+                    <div class="batch-buttons">
+                        <button
+                            class="batch-btn random-mode ${
+                                currentMode === "random" &&
+                                currentRandomCount === 100
+                                    ? "active"
+                                    : ""
+                            }"
+                            onclick="loadRandomQuestions(100)"
+                        >
+                            🎲 隨機 100 題
                         </button>
-                        <button class="batch-btn ${currentBatch === 2 ? 'active' : ''}" onclick="loadBatch(2)">
-                            第 2 批<br>(101-200題)
+
+                        <button
+                            class="batch-btn random-mode ${
+                                currentMode === "random" &&
+                                currentRandomCount === 150
+                                    ? "active"
+                                    : ""
+                            }"
+                            onclick="loadRandomQuestions(150)"
+                        >
+                            🎲 隨機 150 題
                         </button>
-                        <button class="batch-btn ${currentBatch === 3 ? 'active' : ''}" onclick="loadBatch(3)">
-                            第 3 批<br>(201-300題)
-                        </button>
-                        <button class="batch-btn ${currentBatch === 4 ? 'active' : ''}" onclick="loadBatch(4)">
-                            第 4 批<br>(301-400題)
-                        </button>
-                        <button class="batch-btn ${currentBatch === 5 ? 'active' : ''}" onclick="loadBatch(5)">
-                            第 5 批<br>(401-500題)
-                        </button>
-                        <button class="batch-btn ${currentBatch === 6 ? 'active' : ''}" onclick="loadBatch(6)">
-                            第 6 批<br>(501-600題)
-                        </button>
-                        <button class="batch-btn ${currentBatch === 7 ? 'active' : ''}" onclick="loadBatch(7)">
-                            第 7 批<br>(601-700題)
-                        </button>
-                        <button class="batch-btn ${currentBatch === 8 ? 'active' : ''}" onclick="loadBatch(8)">
-                            第 8 批<br>(701-740題)
+
+                        <button
+                            class="batch-btn bookmark-mode ${
+                                currentMode === "bookmarked"
+                                    ? "active"
+                                    : ""
+                            }"
+                            onclick="loadBookmarkedPractice()"
+                        >
+                            ⭐ 收藏題練習
+                            <br>
+                            ${bookmarkedQuestionIds.size} 題
                         </button>
                     </div>
                 </div>
             `;
         }
 
-        // 顯示題目
+        function showEmptyBookmarkMessage() {
+            const content =
+                document.getElementById("content");
+
+            content.innerHTML = `
+                <div class="empty-state">
+                    <h2>⭐ 尚未收藏任何題目</h2>
+
+                    <p>
+                        請先進入批次或隨機模式，
+                        再按下題目右上角的星號收藏題目。
+                    </p>
+
+                    <button
+                        class="btn btn-primary"
+                        onclick="showBatchSelector()"
+                    >
+                        📚 選擇其他練習模式
+                    </button>
+                </div>
+            `;
+        }
+
+        /*
+         * ==========================================================
+         * 題目顯示與作答
+         * ==========================================================
+         */
+
         function displayQuestion() {
             if (questions.length === 0) {
-                document.getElementById('content').innerHTML = `
-                    <div class="loading">
-                        <h2>📚 請選擇題庫批次</h2>
-                        <p>請從上方選擇要練習的題目批次</p>
-                    </div>
-                `;
+                showNoPracticeSelected();
+                updateProgress();
                 return;
             }
 
-            const question = questions[currentQuestionIndex];
-            const content = document.getElementById('content');
-            
+            if (currentQuestionIndex < 0) {
+                currentQuestionIndex = 0;
+            }
+
+            if (
+                currentQuestionIndex >= questions.length
+            ) {
+                currentQuestionIndex =
+                    questions.length - 1;
+            }
+
+            const question =
+                questions[currentQuestionIndex];
+
+            const content =
+                document.getElementById("content");
+
+            const optionHTML = question.options
+                .map(function (option, index) {
+                    const cleanOption =
+                        String(option).replace(
+                            /^[A-D]\)\s*/,
+                            ""
+                        );
+
+                    return `
+                        <div
+                            class="option ${getOptionClass(index)}"
+                            onclick="selectOption(${index})"
+                        >
+                            <span class="option-label">
+                                ${String.fromCharCode(65 + index)})
+                            </span>
+
+                            <span class="option-text">${
+                                escapeHTML(cleanOption)
+                            }</span>
+                        </div>
+                    `;
+                })
+                .join("");
+
             content.innerHTML = `
                 <div class="question-card">
                     <div class="question-header">
-                        <span class="question-number">題目 ${currentQuestionIndex + 1} / ${questions.length}</span>
-                        <button class="bookmark-btn ${question.bookmarked ? 'active' : ''}" onclick="toggleBookmark()">
-                            ${question.bookmarked ? '⭐' : '☆'}
+                        <div>
+                            <div class="question-number">
+                                題目
+                                ${currentQuestionIndex + 1}
+                                /
+                                ${questions.length}
+                            </div>
+
+                            <div class="question-meta">
+                                題庫 ID：
+                                ${escapeHTML(question.id)}
+                                ・
+                                ${escapeHTML(getCurrentModeName())}
+                            </div>
+                        </div>
+
+                        <button
+                            class="bookmark-btn ${
+                                question.bookmarked
+                                    ? "active"
+                                    : ""
+                            }"
+                            onclick="toggleBookmark()"
+                            title="${
+                                question.bookmarked
+                                    ? "取消收藏"
+                                    : "加入收藏"
+                            }"
+                            aria-label="${
+                                question.bookmarked
+                                    ? "取消收藏"
+                                    : "加入收藏"
+                            }"
+                        >
+                            ${question.bookmarked ? "⭐" : "☆"}
                         </button>
                     </div>
-                    <div class="question-text">${question.question}</div>
+
+                    <div class="question-text">${
+                        escapeHTML(question.question)
+                    }</div>
+
                     <div class="options">
-                        ${question.options.map((option, index) => `
-                            <div class="option ${getOptionClass(index)}" onclick="selectOption(${index})">
-                                <span class="option-label">${String.fromCharCode(65 + index)})</span>
-                                <span class="option-text">${option.replace(/^[A-D]\)\s*/, '')}</span>
-                            </div>
-                        `).join('')}
+                        ${optionHTML}
                     </div>
+
                     <div class="navigation">
-                        <button class="btn btn-secondary" onclick="previousQuestion()" ${currentQuestionIndex === 0 ? 'disabled' : ''}>
+                        <button
+                            class="btn btn-secondary"
+                            onclick="previousQuestion()"
+                            ${
+                                currentQuestionIndex === 0
+                                    ? "disabled"
+                                    : ""
+                            }
+                        >
                             ⬅️ 上一題
                         </button>
-                        <button class="btn btn-primary" onclick="nextQuestion()" ${currentQuestionIndex === questions.length - 1 ? 'disabled' : ''}>
+
+                        <button
+                            class="btn btn-primary"
+                            onclick="nextQuestion()"
+                            ${
+                                currentQuestionIndex ===
+                                questions.length - 1
+                                    ? "disabled"
+                                    : ""
+                            }
+                        >
                             下一題 ➡️
                         </button>
                     </div>
@@ -605,42 +1430,105 @@
             `;
 
             updateProgress();
-            saveProgress();
         }
 
-        // 取得選項樣式
+        function showNoPracticeSelected() {
+            document.getElementById("content").innerHTML = `
+                <div class="loading">
+                    <h2>📚 請選擇練習模式</h2>
+                    <p>
+                        可選擇依序批次、隨機抽題或收藏題練習。
+                    </p>
+                </div>
+            `;
+        }
+
         function getOptionClass(index) {
-            const question = questions[currentQuestionIndex];
-            let classes = [];
-            
+            const question =
+                questions[currentQuestionIndex];
+
+            const classes = [];
+
             if (question.userAnswer === index) {
-                classes.push('selected');
+                classes.push("selected");
             }
-            
+
             if (showAnswers) {
                 if (index === question.correctAnswer) {
-                    classes.push('correct');
-                } else if (question.userAnswer === index && index !== question.correctAnswer) {
-                    classes.push('incorrect');
+                    classes.push("correct");
+                } else if (
+                    question.userAnswer === index &&
+                    index !== question.correctAnswer
+                ) {
+                    classes.push("incorrect");
                 }
             }
-            
-            return classes.join(' ');
+
+            return classes.join(" ");
         }
 
-        // 選擇選項
         function selectOption(index) {
-            questions[currentQuestionIndex].userAnswer = index;
+            if (showAnswers || questions.length === 0) {
+                return;
+            }
+
+            questions[currentQuestionIndex].userAnswer =
+                index;
+
             displayQuestion();
         }
 
-        // 切換標記
         function toggleBookmark() {
-            questions[currentQuestionIndex].bookmarked = !questions[currentQuestionIndex].bookmarked;
+            if (questions.length === 0) {
+                return;
+            }
+
+            const question =
+                questions[currentQuestionIndex];
+
+            const questionId = Number(question.id);
+
+            if (bookmarkedQuestionIds.has(questionId)) {
+                bookmarkedQuestionIds.delete(questionId);
+            } else {
+                bookmarkedQuestionIds.add(questionId);
+            }
+
+            saveBookmarkIds();
+            applyBookmarksToQuestions();
+
+            /*
+             * 收藏題練習中取消收藏時，
+             * 立即把該題移出目前收藏練習。
+             */
+            if (
+                currentMode === "bookmarked" &&
+                !bookmarkedQuestionIds.has(questionId)
+            ) {
+                questions = questions.filter(
+                    function (item) {
+                        return Number(item.id) !== questionId;
+                    }
+                );
+
+                if (questions.length === 0) {
+                    currentQuestionIndex = 0;
+                    updateProgress();
+                    showEmptyBookmarkMessage();
+                    return;
+                }
+
+                if (
+                    currentQuestionIndex >= questions.length
+                ) {
+                    currentQuestionIndex =
+                        questions.length - 1;
+                }
+            }
+
             displayQuestion();
         }
 
-        // 上一題
         function previousQuestion() {
             if (currentQuestionIndex > 0) {
                 currentQuestionIndex--;
@@ -648,258 +1536,721 @@
             }
         }
 
-        // 下一題
         function nextQuestion() {
-            if (currentQuestionIndex < questions.length - 1) {
+            if (
+                currentQuestionIndex <
+                questions.length - 1
+            ) {
                 currentQuestionIndex++;
                 displayQuestion();
             }
         }
 
-        // 顯示題目總覽
+        /*
+         * ==========================================================
+         * 題目總覽與篩選
+         * ==========================================================
+         */
+
+        function getGridItemClass(index) {
+            const question = questions[index];
+            const classes = [];
+
+            if (question.userAnswer !== null) {
+                classes.push("answered");
+            }
+
+            if (question.bookmarked) {
+                classes.push("bookmarked");
+            }
+
+            if (index === currentQuestionIndex) {
+                classes.push("current");
+            }
+
+            return classes.join(" ");
+        }
+
         function showQuestionGrid() {
-            const content = document.getElementById('content');
-            content.innerHTML = `
+            if (questions.length === 0) {
+                showBatchSelector();
+                return;
+            }
+
+            const gridHTML = questions
+                .map(function (question, index) {
+                    return `
+                        <div
+                            class="question-grid-item ${
+                                getGridItemClass(index)
+                            }"
+                            onclick="goToQuestion(${index})"
+                            title="練習第 ${
+                                index + 1
+                            } 題，題庫 ID ${
+                                escapeHTML(question.id)
+                            }"
+                        >
+                            ${escapeHTML(question.id)}
+                        </div>
+                    `;
+                })
+                .join("");
+
+            document.getElementById("content").innerHTML = `
                 <div class="question-card">
-                    <h2 style="margin-bottom: 20px;">📋 題目總覽</h2>
+                    <h2 style="margin-bottom: 12px;">
+                        📋 題目總覽
+                    </h2>
+
+                    <p style="
+                        margin-bottom: 20px;
+                        color: #666;
+                        line-height: 1.7;
+                    ">
+                        格子內顯示原始題庫 ID。
+                    </p>
+
                     <div class="filter-buttons">
-                        <button class="btn btn-primary" onclick="displayQuestion()">返回答題</button>
-                        <button class="btn btn-secondary" onclick="filterAll()">全部題目</button>
-                        <button class="btn btn-success" onclick="filterAnswered()">已作答</button>
-                        <button class="btn btn-warning" onclick="filterBookmarked()">已標記</button>
+                        <button
+                            class="btn btn-primary"
+                            onclick="displayQuestion()"
+                        >
+                            返回答題
+                        </button>
+
+                        <button
+                            class="btn btn-secondary"
+                            onclick="filterAll()"
+                        >
+                            全部題目
+                        </button>
+
+                        <button
+                            class="btn btn-success"
+                            onclick="filterAnswered()"
+                        >
+                            已作答
+                        </button>
+
+                        <button
+                            class="btn btn-warning"
+                            onclick="filterBookmarked()"
+                        >
+                            已收藏
+                        </button>
                     </div>
-                    <div class="question-grid" id="question-grid">
-                        ${questions.map((q, index) => `
-                            <div class="question-grid-item ${getGridItemClass(index)}" onclick="goToQuestion(${index})">
-                                ${index + 1}
-                            </div>
-                        `).join('')}
+
+                    <div class="question-grid">
+                        ${gridHTML}
                     </div>
                 </div>
             `;
         }
 
-        // 取得題目格子樣式
-        function getGridItemClass(index) {
-            const question = questions[index];
-            let classes = [];
-            
-            if (index === currentQuestionIndex) {
-                classes.push('current');
-            } else if (question.bookmarked) {
-                classes.push('bookmarked');
-            } else if (question.userAnswer !== null) {
-                classes.push('answered');
-            }
-            
-            return classes.join(' ');
-        }
-
-        // 跳到指定題目
-        function goToQuestion(index) {
-            currentQuestionIndex = index;
-            displayQuestion();
-        }
-
-        // 篩選功能
         function filterAll() {
             showQuestionGrid();
         }
 
         function filterAnswered() {
-            const content = document.getElementById('content');
-            const answeredQuestions = questions.map((q, i) => ({q, i})).filter(({q}) => q.userAnswer !== null);
-            
-            content.innerHTML = `
-                <div class="question-card">
-                    <h2 style="margin-bottom: 20px;">✅ 已作答題目 (${answeredQuestions.length})</h2>
-                    <div class="filter-buttons">
-                        <button class="btn btn-primary" onclick="displayQuestion()">返回答題</button>
-                        <button class="btn btn-secondary" onclick="showQuestionGrid()">全部題目</button>
-                    </div>
-                    <div class="question-grid">
-                        ${answeredQuestions.map(({q, i}) => `
-                            <div class="question-grid-item answered" onclick="goToQuestion(${i})">
-                                ${i + 1}
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-            `;
+            if (questions.length === 0) {
+                showBatchSelector();
+                return;
+            }
+
+            const answeredQuestions = questions
+                .map(function (question, index) {
+                    return {
+                        question: question,
+                        index: index
+                    };
+                })
+                .filter(function (item) {
+                    return (
+                        item.question.userAnswer !== null
+                    );
+                });
+
+            showFilteredGrid(
+                "✅ 已作答題目",
+                answeredQuestions,
+                "answered",
+                "目前尚未作答任何題目。"
+            );
         }
 
         function filterBookmarked() {
-            const content = document.getElementById('content');
-            const bookmarkedQuestions = questions.map((q, i) => ({q, i})).filter(({q}) => q.bookmarked);
-            
-            content.innerHTML = `
-                <div class="question-card">
-                    <h2 style="margin-bottom: 20px;">⭐ 已標記題目 (${bookmarkedQuestions.length})</h2>
-                    <div class="filter-buttons">
-                        <button class="btn btn-primary" onclick="displayQuestion()">返回答題</button>
-                        <button class="btn btn-secondary" onclick="showQuestionGrid()">全部題目</button>
-                    </div>
+            if (questions.length === 0) {
+                if (bookmarkedQuestionIds.size > 0) {
+                    loadBookmarkedPractice();
+                } else {
+                    showEmptyBookmarkMessage();
+                }
+
+                return;
+            }
+
+            const bookmarkedQuestions = questions
+                .map(function (question, index) {
+                    return {
+                        question: question,
+                        index: index
+                    };
+                })
+                .filter(function (item) {
+                    return bookmarkedQuestionIds.has(
+                        Number(item.question.id)
+                    );
+                });
+
+            showFilteredGrid(
+                "⭐ 本次練習中的收藏題目",
+                bookmarkedQuestions,
+                "bookmarked",
+                "本次練習範圍內沒有收藏題目。",
+                true
+            );
+        }
+
+        function showFilteredGrid(
+            title,
+            items,
+            gridClass,
+            emptyText,
+            showAllBookmarksButton
+        ) {
+            const gridHTML = items.length > 0
+                ? `
                     <div class="question-grid">
-                        ${bookmarkedQuestions.map(({q, i}) => `
-                            <div class="question-grid-item bookmarked" onclick="goToQuestion(${i})">
-                                ${i + 1}
-                            </div>
-                        `).join('')}
+                        ${items.map(function (item) {
+                            return `
+                                <div
+                                    class="question-grid-item ${gridClass}"
+                                    onclick="goToQuestion(${item.index})"
+                                    title="練習第 ${
+                                        item.index + 1
+                                    } 題"
+                                >
+                                    ${escapeHTML(
+                                        item.question.id
+                                    )}
+                                </div>
+                            `;
+                        }).join("")}
                     </div>
+                `
+                : `
+                    <p style="
+                        color: #666;
+                        line-height: 1.8;
+                    ">
+                        ${escapeHTML(emptyText)}
+                    </p>
+                `;
+
+            document.getElementById("content").innerHTML = `
+                <div class="question-card">
+                    <h2 style="margin-bottom: 20px;">
+                        ${title}（${items.length}）
+                    </h2>
+
+                    <div class="filter-buttons">
+                        <button
+                            class="btn btn-primary"
+                            onclick="displayQuestion()"
+                        >
+                            返回答題
+                        </button>
+
+                        <button
+                            class="btn btn-secondary"
+                            onclick="showQuestionGrid()"
+                        >
+                            全部題目
+                        </button>
+
+                        ${
+                            showAllBookmarksButton
+                                ? `
+                                    <button
+                                        class="btn btn-warning"
+                                        onclick="loadBookmarkedPractice()"
+                                    >
+                                        練習全部收藏題
+                                        （${bookmarkedQuestionIds.size}）
+                                    </button>
+                                `
+                                : ""
+                        }
+                    </div>
+
+                    ${gridHTML}
                 </div>
             `;
         }
 
-        // 更新進度
-        function updateProgress() {
-            const answeredCount = questions.filter(q => q.userAnswer !== null).length;
-            const correctCount = questions.filter(q => q.userAnswer === q.correctAnswer).length;
-            const incorrectCount = questions.filter(q => q.userAnswer !== null && q.userAnswer !== q.correctAnswer).length;
-            const bookmarkCount = questions.filter(q => q.bookmarked).length;
-            
-            document.getElementById('answered-count').textContent = answeredCount;
-            document.getElementById('total-count').textContent = questions.length;
-            document.getElementById('correct-count').textContent = correctCount;
-            document.getElementById('incorrect-count').textContent = incorrectCount;
-            document.getElementById('bookmark-count').textContent = bookmarkCount;
-            
-            const progress = questions.length > 0 ? (answeredCount / questions.length * 100).toFixed(1) : 0;
-            const progressFill = document.getElementById('progress-fill');
-            progressFill.style.width = progress + '%';
-            progressFill.textContent = progress + '%';
+        function goToQuestion(index) {
+            if (
+                index < 0 ||
+                index >= questions.length
+            ) {
+                return;
+            }
+
+            currentQuestionIndex = index;
+            displayQuestion();
         }
 
-        // 提交答案
+        /*
+         * ==========================================================
+         * 進度、提交與結果
+         * ==========================================================
+         */
+
+        function updateProgress() {
+            const answeredCount = questions.filter(
+                function (question) {
+                    return question.userAnswer !== null;
+                }
+            ).length;
+
+            const correctCount = questions.filter(
+                function (question) {
+                    return (
+                        question.userAnswer !== null &&
+                        question.userAnswer ===
+                            question.correctAnswer
+                    );
+                }
+            ).length;
+
+            const incorrectCount = questions.filter(
+                function (question) {
+                    return (
+                        question.userAnswer !== null &&
+                        question.userAnswer !==
+                            question.correctAnswer
+                    );
+                }
+            ).length;
+
+            document.getElementById(
+                "answered-count"
+            ).textContent = answeredCount;
+
+            document.getElementById(
+                "total-count"
+            ).textContent = questions.length;
+
+            document.getElementById(
+                "correct-count"
+            ).textContent = correctCount;
+
+            document.getElementById(
+                "incorrect-count"
+            ).textContent = incorrectCount;
+
+            updateBookmarkDisplays();
+
+            const progress =
+                questions.length > 0
+                    ? (
+                        answeredCount /
+                        questions.length *
+                        100
+                    ).toFixed(1)
+                    : "0.0";
+
+            const progressFill =
+                document.getElementById(
+                    "progress-fill"
+                );
+
+            progressFill.style.width =
+                progress + "%";
+
+            progressFill.textContent =
+                progress + "%";
+        }
+
         function submitExam() {
-            const answeredCount = questions.filter(q => q.userAnswer !== null).length;
-            
+            if (questions.length === 0) {
+                alert("請先選擇練習模式。");
+                return;
+            }
+
+            const answeredCount = questions.filter(
+                function (question) {
+                    return question.userAnswer !== null;
+                }
+            ).length;
+
             if (answeredCount < questions.length) {
-                if (!confirm(`您還有 ${questions.length - answeredCount} 題未作答，確定要提交嗎？`)) {
+                const unanswered =
+                    questions.length - answeredCount;
+
+                const confirmed = confirm(
+                    "您還有 " +
+                    unanswered +
+                    " 題未作答，確定要提交嗎？"
+                );
+
+                if (!confirmed) {
                     return;
                 }
             }
-            
+
             showAnswers = true;
             showResults();
         }
 
-        // 顯示結果
         function showResults() {
-            const correctCount = questions.filter(q => q.userAnswer === q.correctAnswer).length;
-            const incorrectCount = questions.filter(q => q.userAnswer !== null && q.userAnswer !== q.correctAnswer).length;
-            const unansweredCount = questions.filter(q => q.userAnswer === null).length;
-            const score = questions.length > 0 ? (correctCount / questions.length * 100).toFixed(1) : 0;
-            
-            const content = document.getElementById('content');
-            content.innerHTML = `
+            const correctCount = questions.filter(
+                function (question) {
+                    return (
+                        question.userAnswer !== null &&
+                        question.userAnswer ===
+                            question.correctAnswer
+                    );
+                }
+            ).length;
+
+            const incorrectCount = questions.filter(
+                function (question) {
+                    return (
+                        question.userAnswer !== null &&
+                        question.userAnswer !==
+                            question.correctAnswer
+                    );
+                }
+            ).length;
+
+            const unansweredCount = questions.filter(
+                function (question) {
+                    return question.userAnswer === null;
+                }
+            ).length;
+
+            const score =
+                questions.length > 0
+                    ? (
+                        correctCount /
+                        questions.length *
+                        100
+                    ).toFixed(1)
+                    : "0.0";
+
+            document.getElementById("content").innerHTML = `
                 <div class="results">
-                    <h2>🎉 考試完成！</h2>
-                    <div class="score-display">${score}%</div>
+                    <h2>🎉 練習完成！</h2>
+
+                    <p style="
+                        color: #666;
+                        font-size: 1.15em;
+                    ">
+                        ${escapeHTML(getCurrentModeName())}
+                    </p>
+
+                    <div class="score-display">
+                        ${score}%
+                    </div>
+
                     <div class="stats">
                         <div class="stat-card">
                             <h3>✅ 答對</h3>
                             <p>${correctCount}</p>
                         </div>
+
                         <div class="stat-card">
                             <h3>❌ 答錯</h3>
                             <p>${incorrectCount}</p>
                         </div>
+
                         <div class="stat-card">
                             <h3>⚪ 未作答</h3>
                             <p>${unansweredCount}</p>
                         </div>
+
                         <div class="stat-card">
                             <h3>📊 總題數</h3>
                             <p>${questions.length}</p>
                         </div>
                     </div>
-                    <div style="margin-top: 30px;">
-                        <button class="btn btn-primary" onclick="reviewAnswers()">📝 檢視答案</button>
-                        <button class="btn btn-secondary" onclick="resetExam()">🔄 重新開始</button>
-                        <button class="btn btn-info" onclick="showBatchSelector()">📚 切換批次</button>
+
+                    <div style="
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 12px;
+                        margin-top: 30px;
+                    ">
+                        <button
+                            class="btn btn-primary"
+                            onclick="reviewAnswers()"
+                        >
+                            📝 檢視答案
+                        </button>
+
+                        <button
+                            class="btn btn-secondary"
+                            onclick="resetExam()"
+                        >
+                            🔄 重新開始
+                        </button>
+
+                        <button
+                            class="btn btn-info"
+                            onclick="showBatchSelector()"
+                        >
+                            📚 切換模式
+                        </button>
                     </div>
                 </div>
             `;
+
+            updateProgress();
         }
 
-        // 檢視答案
         function reviewAnswers() {
             currentQuestionIndex = 0;
             displayQuestion();
         }
 
-        // 重新開始
         function resetExam() {
-            if (confirm('確定要重新開始嗎？所有作答記錄將被清除。')) {
-                questions.forEach(q => {
-                    q.userAnswer = null;
-                    q.bookmarked = false;
+            if (currentMode === "none") {
+                showBatchSelector();
+                return;
+            }
+
+            const confirmed = confirm(
+                "確定要重新開始嗎？\n\n" +
+                "作答紀錄會清除，但收藏題目會保留。" +
+                (
+                    currentMode === "random"
+                        ? "\n隨機模式會重新抽取一組題目。"
+                        : ""
+                )
+            );
+
+            if (!confirmed) {
+                return;
+            }
+
+            const previousMode = currentMode;
+            const previousBatch = currentBatch;
+            const previousRandomCount =
+                currentRandomCount;
+
+            if (previousMode === "batch") {
+                loadBatch(previousBatch);
+                return;
+            }
+
+            if (previousMode === "random") {
+                loadRandomQuestions(
+                    previousRandomCount
+                );
+                return;
+            }
+
+            if (previousMode === "bookmarked") {
+                loadBookmarkedPractice();
+            }
+        }
+
+        /*
+         * ==========================================================
+         * 搜尋
+         * ==========================================================
+         */
+
+        function searchCurrentQuestions(keyword) {
+            if (questions.length === 0) {
+                return;
+            }
+
+            const normalizedKeyword =
+                keyword.trim().toLowerCase();
+
+            if (normalizedKeyword.length === 0) {
+                displayQuestion();
+                return;
+            }
+
+            if (normalizedKeyword.length < 2) {
+                return;
+            }
+
+            const results = questions
+                .map(function (question, index) {
+                    return {
+                        question: question,
+                        index: index
+                    };
+                })
+                .filter(function (item) {
+                    const questionText = String(
+                        item.question.question ?? ""
+                    ).toLowerCase();
+
+                    const optionText = Array.isArray(
+                        item.question.options
+                    )
+                        ? item.question.options
+                            .join(" ")
+                            .toLowerCase()
+                        : "";
+
+                    const idText = String(
+                        item.question.id
+                    ).toLowerCase();
+
+                    return (
+                        questionText.includes(
+                            normalizedKeyword
+                        ) ||
+                        optionText.includes(
+                            normalizedKeyword
+                        ) ||
+                        idText === normalizedKeyword
+                    );
                 });
+
+            const resultHTML = results.length > 0
+                ? `
+                    <div class="question-grid">
+                        ${results.map(function (item) {
+                            return `
+                                <div
+                                    class="question-grid-item ${
+                                        getGridItemClass(
+                                            item.index
+                                        )
+                                    }"
+                                    onclick="goToQuestion(${
+                                        item.index
+                                    })"
+                                    title="練習第 ${
+                                        item.index + 1
+                                    } 題"
+                                >
+                                    ${escapeHTML(
+                                        item.question.id
+                                    )}
+                                </div>
+                            `;
+                        }).join("")}
+                    </div>
+                `
+                : `
+                    <p style="
+                        color: #666;
+                        line-height: 1.8;
+                    ">
+                        找不到符合「${
+                            escapeHTML(keyword)
+                        }」的題目。
+                    </p>
+                `;
+
+            document.getElementById("content").innerHTML = `
+                <div class="question-card">
+                    <h2 style="margin-bottom: 20px;">
+                        🔍 搜尋結果（${results.length}）
+                    </h2>
+
+                    <div class="filter-buttons">
+                        <button
+                            class="btn btn-primary"
+                            onclick="clearSearchAndReturn()"
+                        >
+                            返回答題
+                        </button>
+                    </div>
+
+                    ${resultHTML}
+                </div>
+            `;
+        }
+
+        function clearSearchAndReturn() {
+            clearSearchInput();
+            displayQuestion();
+        }
+
+        /*
+         * ==========================================================
+         * 頁面初始化
+         * ==========================================================
+         */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+                collectAllQuestions();
+
+                /*
+                 * 先搬移舊收藏，再刪除舊版答題進度。
+                 * 新版不儲存作答內容，因此每次開啟頁面
+                 * 都會從全新的答題狀態開始。
+                 */
+                migrateLegacyBookmarks();
+                applyBookmarksToQuestions();
+                clearAllAnswers();
+
+                questions = [];
+                currentMode = "none";
+                currentBatch = 0;
+                currentRandomCount = 0;
                 currentQuestionIndex = 0;
                 showAnswers = false;
-                localStorage.removeItem(`examProgress_batch${currentBatch}`);
-                displayQuestion();
-            }
-        }
 
-        // 搜尋功能
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.getElementById('search-input');
-            if (searchInput) {
-                searchInput.addEventListener('input', function(e) {
-                    const keyword = e.target.value.toLowerCase();
-                    if (keyword.length < 2) return;
-                    
-                    const results = questions.map((q, i) => ({q, i}))
-                        .filter(({q}) => q.question.toLowerCase().includes(keyword));
-                    
-                    if (results.length > 0) {
-                        const content = document.getElementById('content');
-                        content.innerHTML = `
-                            <div class="question-card">
-                                <h2 style="margin-bottom: 20px;">🔍 搜尋結果 (${results.length})</h2>
-                                <div class="filter-buttons">
-                                    <button class="btn btn-primary" onclick="displayQuestion()">返回答題</button>
-                                </div>
-                                <div class="question-grid">
-                                    ${results.map(({q, i}) => `
-                                        <div class="question-grid-item" onclick="goToQuestion(${i})">
-                                            ${i + 1}
-                                        </div>
-                                    `).join('')}
-                                </div>
-                            </div>
-                        `;
-                    }
-                });
-            }
-        });
+                updateProgress();
+                updateModeButtons();
+                showNoPracticeSelected();
 
-        // 儲存進度
-        function saveProgress() {
-            if (currentBatch > 0) {
-                localStorage.setItem(`examProgress_batch${currentBatch}`, JSON.stringify({
-                    questions: questions,
-                    currentIndex: currentQuestionIndex,
-                    showAnswers: showAnswers
-                }));
-            }
-        }
+                const searchInput =
+                    document.getElementById(
+                        "search-input"
+                    );
 
-        // 載入進度
-        function loadProgress() {
-            if (currentBatch > 0) {
-                const saved = localStorage.getItem(`examProgress_batch${currentBatch}`);
-                if (saved) {
-                    const data = JSON.parse(saved);
-                    if (data.questions && data.questions.length > 0) {
-                        questions = data.questions;
-                        currentQuestionIndex = data.currentIndex || 0;
-                        showAnswers = data.showAnswers || false;
-                    }
+                if (searchInput) {
+                    searchInput.addEventListener(
+                        "input",
+                        function (event) {
+                            searchCurrentQuestions(
+                                event.target.value
+                            );
+                        }
+                    );
+
+                    searchInput.addEventListener(
+                        "keydown",
+                        function (event) {
+                            if (event.key === "Escape") {
+                                clearSearchAndReturn();
+                            }
+                        }
+                    );
+                }
+
+                console.info(
+                    "CEH 題庫載入完成：" +
+                    allQuestions.length +
+                    " 題；收藏：" +
+                    bookmarkedQuestionIds.size +
+                    " 題。"
+                );
+
+                if (allQuestions.length !== 740) {
+                    console.warn(
+                        "預期載入 740 題，目前實際載入 " +
+                        allQuestions.length +
+                        " 題。請確認八個題庫 JS 都已正確載入。"
+                    );
                 }
             }
-        }
+        );
     </script>
 </body>
 </html>
