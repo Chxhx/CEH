@@ -850,7 +850,7 @@ const questionsBatch1 = [
         "options": [
             "A synchronized Layer 3 Smurf attack targeting the institution's internet-facing routers, flooding their interfaces with ICMP echo requests to exhaust bandwidth and disrupt network connectivity.",
             "A coordinated UDP flood attack exploiting vulnerabilities in the institution’s DNS infrastructure, flooding authoritative DNS servers to disrupt domain resolution services.",
-            "A distributed SQL injection attack targeting the institution’s online banking database servers, causing resource exhaustion and database downtime. https:// reurl.cc/v5o6vN",
+            "A distributed SQL injection attack targeting the institution’s online banking database servers, causing resource exhaustion and database downtime.",
             "A zero-day exploit targeting the institution’s web server software, causing buffer overflow and service unavailability through remote code execution."
         ],
         "correctAnswer": 3,
