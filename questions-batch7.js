@@ -942,7 +942,7 @@ const questionsBatch7 = [
             "ntptrace [-n] [-m maxhosts] [servername/IP_address]",
             "ntpq [-inp] [-c command] [host] […] ",
             "ntpdc [-ilnps] [-c command] [host] […]",
-            "npg -p [host]"
+            "ntpq -p [host]"
         ],
         "correctAnswer": 1,
         "userAnswer": null,
