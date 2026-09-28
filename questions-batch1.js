@@ -541,7 +541,7 @@ const questionsBatch1 = [
             "Deriving linear patterns from cipher behavior",
             "Exploiting physical leaks during encryption"
         ],
-        "correctAnswer": 1,
+        "correctAnswer": 2,
         "userAnswer": null,
         "bookmarked": false
     },
