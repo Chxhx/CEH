@@ -669,7 +669,7 @@ const questionsBatch2 = [
             "Utilize SNMP queries to extract user information from network devices",
             "Deploy a packet sniffer to capture and analyze network traffic",
             "Perform a DNS zone transfer to obtain internal domain details",
-            "Exploit null sessions to connect anonymously to the IPCJ share"
+            "Exploit null sessions to connect anonymously to the IPC$ share"
         ],
         "correctAnswer": 3,
         "userAnswer": null,
